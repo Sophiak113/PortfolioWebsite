@@ -38,7 +38,9 @@
 } */
 
 /* Above is original react css i thought there might be some useful things */
-
+*{
+  color: white;
+}
 .background{
   /** Simulationg background-size: cover */
 object-fit: cover;

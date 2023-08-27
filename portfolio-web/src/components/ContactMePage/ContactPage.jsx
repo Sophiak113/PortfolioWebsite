@@ -1,14 +1,13 @@
 import React from 'react'
+import LinkList from './LinkList'
 
 const ContactPage = () => {
 const links = [{
-    id: '1',
     alt:'Github',
     src: 'https://cdn.pixabay.com/photo/2023/05/02/21/08/river-7966163_1280.png',
     link: 'https://github.com/Sophiak113'
 },
 {
-    id: '2',
     alt:'LinkedIn',
     src: 'https://cdn.pixabay.com/photo/2023/05/02/21/08/river-7966163_1280.png',
     link: 'https://www.linkedin.com/in/sophia-kinsey-2057871a2/'
@@ -25,12 +24,9 @@ const links = [{
         <button>Send</button>
       </form>
       <h2>Links</h2>
-      <div className="card-outline">
-        <img src="" alt="LinkedIn" />
-        </div>
-        <div className="card-outline">
-        <img src="" alt="LinkedIn" />
-        </div>
+      <LinkList links={links} />
+      
+
     </div>
   )
 }
