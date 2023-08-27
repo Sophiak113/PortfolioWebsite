@@ -1,5 +1,5 @@
 import Background from './components/Background';
-import './App.css';
+import './App.scss';
 import ContactPage from './components/ContactMePage/ContactPage';
 import HomePage from './components/HomePage';
 import IntroPage from './components/IntroPage';
