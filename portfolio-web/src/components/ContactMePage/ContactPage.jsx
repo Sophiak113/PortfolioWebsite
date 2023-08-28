@@ -27,7 +27,7 @@ const links = [{
             <input type="text" placeholder='Email' />
             <input type="text" name="" placeholder='Name' />
             <input type="text" placeholder='Subject'/>
-            <input type="text" placeholder='Message'/>
+            <input type="textarea" placeholder='Message'/>
             <button>Send</button>
           </form>
         </div>
