@@ -13,20 +13,7 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
 
 @keyframes App-logo-spin {
   from {
@@ -40,6 +27,7 @@
 /* Above is original react css i thought there might be some useful things */
 *{
   color: white;
+  font-family: 'Hind Siliguri', sans-serif;
 }
 .background{
   /** Simulationg background-size: cover */
@@ -71,6 +59,48 @@ justify-content: center;
 
 }
 
-.header-container{
-  text-align: center;
+html,body{
+  // enables scrollsnap
+  scroll-snap-type:y mandatory;
+  /* change the above to y proximity if scroll snapping is too jarring */
+}
+
+.page-container{
+  /* splits the website into viewport height sections that can be scroll snapped to */
+  height: 100vh;
+  width: 100%;
+  scroll-snap-align: center;
+  
+}
+
+
+.header-wrapper{
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+img{
+  // shrinking images to fit inside their wrappers/parent element
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.card-outline{
+  width: 5vw;
+  margin: 1vh 1vw;
+}
+
+// Contact form css
+.contact-body-container{
+  margin: 10vh 15vw;
+  display: flex;
+  justify-content: space-around;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
 }

@@ -9,10 +9,18 @@ function App() {
   return (
     <div className="App">
       <Background/>
-      <HomePage></HomePage>
-      <IntroPage></IntroPage>
-      <ProjectsPage></ProjectsPage>
-      <ContactPage></ContactPage>
+      <div className="page-container">
+        <HomePage></HomePage>
+      </div>
+      <div className="page-container">
+        <IntroPage></IntroPage>
+      </div>
+      <div className="page-container">
+        <ProjectsPage></ProjectsPage>
+      </div>
+      <div className="page-container">
+        <ContactPage></ContactPage>
+      </div>
     </div>
   );
 }

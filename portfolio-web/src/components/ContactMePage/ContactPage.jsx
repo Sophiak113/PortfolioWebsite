@@ -14,22 +14,28 @@ const links = [{
 }
 ]
   return (
-    <div>
+    <div className='contact-container'>
       <div className='header-container'>
             <div className='header-wrapper'>
                 <img src="/ContactMeHeader.png" alt="Contact Me" />
             </div>
         </div>
-      <h2>Send me an email</h2>
-      <form action="">
-        <input type="text" placeholder='Email' />
-        <input type="text" name="" placeholder='Name' />
-        <input type="text" placeholder='Subject'/>
-        <input type="text" placeholder='Message'/>
-        <button>Send</button>
-      </form>
-      <h2>Links</h2>
-      <LinkList links={links} />
+      <div className="contact-body-container">
+        <div className="contact-form-container">
+          <h2>Send me an email</h2>
+          <form className='contact-form' action="">
+            <input type="text" placeholder='Email' />
+            <input type="text" name="" placeholder='Name' />
+            <input type="text" placeholder='Subject'/>
+            <input type="text" placeholder='Message'/>
+            <button>Send</button>
+          </form>
+        </div>
+        <div className="links-container">
+          <h2>Links</h2>
+          <LinkList links={links} />
+        </div>
+      </div>
       
 
     </div>
