@@ -1,6 +1,16 @@
 import React from 'react'
+import ProjectsList from './ProjectsList';
 
 const ProjectsPage = () => {
+  const projects = [{
+    name: 'Recipe Manager'
+  },
+  {
+    name: 'Maze Game'
+  },
+  {
+    name: 'This website'
+  }]
   return (
     <div>
       <div className='header-container'>
@@ -9,12 +19,12 @@ const ProjectsPage = () => {
             </div>
             {/* could create header-container as a component */}
     </div>
+
     <div className='projects-list-container'>
             <div className="projects-body-wrapper">
-                <p>Use mapping function</p>
-                <div className="project-wrapper">
-                    <p>Determined</p>
-                </div>
+              <ProjectsList projects={projects}></ProjectsList>
+                
+                
 {/* could also create the list as a component */}
     </div>
     </div>

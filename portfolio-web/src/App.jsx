@@ -3,7 +3,7 @@ import './App.scss';
 import ContactPage from './components/ContactMePage/ContactPage';
 import HomePage from './components/HomePage';
 import IntroPage from './components/IntroPage';
-import ProjectsPage from './components/ProjectsPage';
+import ProjectsPage from './components/ProjectsPageFolder/ProjectsPage';
 
 function App() {
   return (
