@@ -1,5 +1,6 @@
-import React from 'react'
-import LinkList from './LinkList'
+import React from 'react';
+import LinkList from './LinkList';
+import './Contact.scss';
 
 const ContactPage = () => {
 const links = [{
@@ -27,7 +28,7 @@ const links = [{
             <input type="text" placeholder='Email' />
             <input type="text" name="" placeholder='Name' />
             <input type="text" placeholder='Subject'/>
-            <input type="textarea" placeholder='Message'/>
+            <textarea name="longInput" id="" cols="30" rows="10" placeholder='Message'></textarea>
             <button>Send</button>
           </form>
         </div>
