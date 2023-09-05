@@ -21,8 +21,10 @@ const projects = [{
 
 const ProjectsPage = () => {
   const [showDetail, setShowDetail] = useState(false);
+  const [selectedProjectId, setSelectedProjectId] = useState(null);
 
-  const handleClick = ()=>{
+  const handleClick = (projectId) => {
+    setSelectedProjectId(projectId);
     setShowDetail(true);
   };
   return (
@@ -36,29 +38,43 @@ const ProjectsPage = () => {
 
     <div className='projects-list-container'
     style={{transform: showDetail ? 'translateX(calc(-30vw))':'translateX(0)'}} >
-              <ProjectsList showDetail={showDetail} handleClick={handleClick}/>
+              <ProjectsList
+          showDetail={showDetail}
+          selectedProjectId={selectedProjectId}
+          handleClick={handleClick}
+        />
                 
              
     </div>
-    {showDetail && <ProjectDetail/>}
+    {selectedProjectId && <ProjectDetail project={projects.find((p) => p.id === selectedProjectId)} />}
+
     </div>
   )
 };
 
 //Using a mapping function to display each project and give them the same functions
-function ProjectsList({showDetail, handleClick}) {
+function ProjectsList({showDetail, handleClick, selectedProjectId}) {
   return (
     <div className="projects-body-wrapper">
-      {projects.map((project,index) => (
-        <div className="project-wrapper" onClick={handleClick} key={index}>
+      {projects.map((project) => (
+        <div
+        className={`project-wrapper ${project.id === selectedProjectId ? 'selected' : ''}`}
+        onClick={() => handleClick(project.id)}
+        key={project.id}
+        >
           {project.name}
         </div>
       ))}
     </div>
   );
 }
+function ProjectDetail({ project }) {
 
-function ProjectDetail(){
+  if (!project) {
+    // Handle the case when no project is selected
+    return null;
+  }
+
   return(
     <div className="detail-container">
       <div className="project-wrapper-extension"></div>
@@ -66,11 +82,11 @@ function ProjectDetail(){
       {/* Paragraphs describing the the project */}
       <div className="paragraphs-wrapper">
         <h2>OVERVIEW</h2>
-        <p>{projects.overview}</p>
+        <p>{project.overview}</p>
         <h2>MY ROLE</h2>
-        <p>{projects.myRole}</p>
+        <p>{project.myRole}</p>
         <h2>TOOLS USED</h2>
-        <p>{projects.tools}</p>
+        <p>{project.tools}</p>
       </div>
 
       {/* Video or img of the project */}
@@ -82,7 +98,7 @@ function ProjectDetail(){
       <div className="detail-link-wrapper">
         <h2>LINKS</h2>
         <div className="card-outline">
-        <a href={projects.link}>
+        <a href={project.link}>
                   <img src='/GithubLogo.png' alt='Link to Github Repo' />
               </a>
         </div>
