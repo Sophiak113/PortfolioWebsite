@@ -13,6 +13,7 @@ background-color: $purple;
 border: $purple;
 }
 
+
 .project-wrapper{
   @include default-list-shape();
   line-height: 5vh;
@@ -22,7 +23,7 @@ border: $purple;
 
 }
 
-
+//Postioning the list of projects
 .projects-body-wrapper{
     display: flex;
     justify-content: center;
@@ -32,4 +33,22 @@ border: $purple;
 .projects-list-container{
     display: flex;
     justify-content: center;
+}
+
+//CSS for the detail container (more info about the projects)
+.detail-container{
+    height: 70vh;
+    width: 70vw;
+    background-color: #3B1B72;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.paragraphs-wrapper{
+    grid-column: 1;
+}
+
+.detail-link-wrapper{
+    grid-column: 2;
 }

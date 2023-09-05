@@ -7,15 +7,30 @@ const projects = [{
   overview: 'Recipe Manager allows you to store and write to add your recipes including their instructions and ingredients to a database then save and access them again all through a GUI',
   myRole: 'In this project I worked as part of a team, I wrote the beginnings of the recipe class and the GUI',
   tools: 'Python, Tkinter, YAML',
+  link: '',
   src: '',
   alt: 'Recipe Manager in action'
 
 },
 {
-  name: 'Maze Game'
+  id: '1',
+  name: 'Maze Game',
+  overview: 'Maze game is a simple game where you move throught the maze to reach the exit ensuring not to touch the walls',
+  myRole: 'In this project I worked as part of a team and my designated role was to do the entirety of the maze game from design to mechanics',
+  tools: 'Python, Pygame',
+  link: '',
+  src: '',
+  alt: 'Maze Game in action'
 },
 {
-  name: 'This website'
+  id: '2',
+  name: 'This website',
+  overview: 'This website is to display my abilities as a software engineer',
+  myRole: 'From design to coding I did everything on this website!',
+  tools: 'React (jsx), Javascript, css, sass, node, express js, nodemailer',
+  link: '',
+  src: '',
+  alt: ''
 }]
 
 
@@ -28,7 +43,7 @@ const ProjectsPage = () => {
     setShowDetail(true);
   };
   return (
-    <div>
+    <div className='project-page-container'>
       <div className='header-container'>
             <div className='header-wrapper'>
                 <img src="/ProjectHeader.png" alt="Projects" />
