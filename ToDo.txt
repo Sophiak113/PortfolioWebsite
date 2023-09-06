@@ -1,0 +1,1 @@
+-Create CardLinksIcons as a core component as I have used card-outline in projects github link and skills icons

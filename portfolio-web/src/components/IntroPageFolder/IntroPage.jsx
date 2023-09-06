@@ -1,5 +1,6 @@
 import React from 'react';
 import './Intro.scss';
+import Skills from './Skills';
 
 const IntroPage = () => {
     const qualities = ['Resilient', 'Diligent', 'Fast Learner', 'Motivated', 'Team Player']
@@ -25,7 +26,7 @@ const IntroPage = () => {
                     <h2>SKILLS</h2>
                 </div>
                 <div className='skills-body-wrapper'>
-                    <p>skills icons and ratings</p>
+                    <Skills></Skills>
                 </div>
             </div>
             <div className='qualities-container'>
@@ -46,4 +47,4 @@ const IntroPage = () => {
   )
 }
 
-export default IntroPage
+export default IntroPage;
