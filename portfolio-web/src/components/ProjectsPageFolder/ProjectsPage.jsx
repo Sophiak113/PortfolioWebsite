@@ -116,7 +116,7 @@ function ProjectDetail({ project }) {
         <h2>LINKS</h2>
         <div className="card-outline">
         <a href={project.link} target="_blank">
-                  <img src='/GithubLogo.png' alt='Link to Github Repo' />
+                  <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
               </a>
         </div>
       </div>
