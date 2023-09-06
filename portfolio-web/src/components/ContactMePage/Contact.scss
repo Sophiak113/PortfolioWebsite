@@ -1,0 +1,85 @@
+//Sass variables
+$pink:#F29CED;
+$fuchsia: #FF037A;
+$purple:#3B1B72;
+$standardFontSize:calc(1vw + 3px);
+$h2FontSize:50px;
+
+@mixin default-list-shape{
+    height: 5vh;
+border-radius: 30px;
+text-align: center;
+background-color: $purple;
+border: $purple;
+}
+
+.card-outline{
+    width: 5vw;
+    height: 5vw;
+    margin: 1vw 1vw;
+    padding: 5px;
+    border: 4px outset $purple;
+    border-radius: 15px;
+  }
+
+//Contact Image Links
+
+img{
+// shrinking images to fit inside their wrappers/parent element
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
+
+
+// Contact form css
+//Positioning elements on the contact page
+.contact-body-container{
+margin: 10vh 10vw;
+display: flex;
+justify-content: space-around;
+flex-grow: 1;
+}
+.contact-form{
+display: flex;
+flex-direction: column;
+gap: 1vh;
+}
+
+
+//Controls size of input boxes
+.contact-form-container{
+width: 20vw;
+height: 60vh;
+}
+
+//Making contact form look pretty
+input[type=text] {
+background-color: $purple;
+border: $purple;
+}
+textarea{
+background-color: $purple;
+border: $purple;
+height: 30vh;
+border-radius: 25px;
+}
+.contact-form>*:not(textarea){
+height: 5vh;
+border-radius: 30px;
+text-align: center;
+}
+//Making the placeholder white in all browsers
+//Chrome, Firefox, Opera, Safari 10.1+
+::placeholder {
+color: white;
+opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+color: white;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+color: white;
+}

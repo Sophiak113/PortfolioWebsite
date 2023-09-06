@@ -1,0 +1,54 @@
+//Sass variables
+$pink:#F29CED;
+$fuchsia: #FF037A;
+$purple:#3B1B72;
+$standardFontSize:calc(1vw + 3px);
+$h2FontSize:50px;
+
+@mixin default-list-shape{
+    height: 5vh;
+border-radius: 30px;
+text-align: center;
+background-color: $purple;
+border: $purple;
+}
+
+
+.project-wrapper{
+  @include default-list-shape();
+  line-height: 5vh;
+  width: 400px;
+  margin: 7px 0px;
+//   This Line height is to vertically center the text
+
+}
+
+//Postioning the list of projects
+.projects-body-wrapper{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.projects-list-container{
+    display: flex;
+    justify-content: center;
+}
+
+//CSS for the detail container (more info about the projects)
+.detail-container{
+    height: 70vh;
+    width: 70vw;
+    background-color: #3B1B72;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.paragraphs-wrapper{
+    grid-column: 1;
+}
+
+.detail-link-wrapper{
+    grid-column: 2;
+}
