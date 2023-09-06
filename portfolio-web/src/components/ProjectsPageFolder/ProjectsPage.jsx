@@ -19,7 +19,7 @@ const projects = [{
   myRole: 'In this project I worked as part of a team and my designated role was to do the entirety of the maze game from design to mechanics',
   tools: 'Python, Pygame',
   link: '',
-  src: '',
+  src: '/MazeGameSnippet.png',
   alt: 'Maze Game in action'
 },
 {
@@ -51,17 +51,19 @@ const ProjectsPage = () => {
             {/* could create header-container as a component */}
     </div>
 
-    <div className='projects-list-container'
-    style={{transform: showDetail ? 'translateX(calc(-30vw))':'translateX(0)'}} >
-              <ProjectsList
-          showDetail={showDetail}
-          selectedProjectId={selectedProjectId}
-          handleClick={handleClick}
-        />
-                
-             
+    <div className="project-and-detail-container">
+      <div className='projects-list-container'
+      style={{transform: showDetail ? 'gridColumn(1)':'gridColumn(2)'}} >
+                <ProjectsList
+            showDetail={showDetail}
+            selectedProjectId={selectedProjectId}
+            handleClick={handleClick}
+          />
+      
+      
+      </div>
+      {selectedProjectId && <ProjectDetail project={projects.find((p) => p.id === selectedProjectId)} />}
     </div>
-    {selectedProjectId && <ProjectDetail project={projects.find((p) => p.id === selectedProjectId)} />}
 
     </div>
   )
@@ -106,7 +108,7 @@ function ProjectDetail({ project }) {
 
       {/* Video or img of the project */}
       <div className="detail-image-wrapper">
-        <img src="" alt="" />
+        <img className='detail-img' src={project.src} alt={project.alt} />
       </div>
 
       {/* Github Link in the form of a github icon */}
