@@ -18,7 +18,7 @@ const projects = [{
   overview: 'Maze game is a simple game where you move throught the maze to reach the exit ensuring not to touch the walls',
   myRole: 'In this project I worked as part of a team and my designated role was to do the entirety of the maze game from design to mechanics',
   tools: 'Python, Pygame',
-  link: '',
+  link: 'https://github.com/lachlanin4/CapstoneProject3-maze',
   src: '/MazeGameSnippet.png',
   alt: 'Maze Game in action'
 },

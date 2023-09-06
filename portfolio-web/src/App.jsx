@@ -1,8 +1,8 @@
 import Background from './components/Background';
 import './App.scss';
-import ContactPage from './components/ContactMePage/ContactPage';
+import ContactPage from './components/ContactMePageFolder/ContactPage';
 import HomePage from './components/HomePage';
-import IntroPage from './components/IntroPage';
+import IntroPage from './components/IntroPageFolder/IntroPage';
 import ProjectsPage from './components/ProjectsPageFolder/ProjectsPage';
 
 function App() {
