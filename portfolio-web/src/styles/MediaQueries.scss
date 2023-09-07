@@ -97,5 +97,36 @@
         line-height: 1vh;
     }
 
+    //Projects Page mobile styling
+
+    .project-page-container>.header-container{
+        margin-top: 30px;
+    }
+
+    //Making it so the list of projects will be a horizontal list section at the top
+    //and the detail container will appear underneath so it'll be stacked
+    .project-and-detail-container{
+        display: flex;
+        flex-direction: column;
+        padding-top: 20px;
+    }
+    .projects-body-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .project-wrapper{
+        padding: 0 5px;
+    }
+
+    //Making detail container stacked layout instead of grid
+    .detail-container{
+        display: flex;
+        flex-direction: column;
+        width: 85%;
+
+    }
+
   
   }
