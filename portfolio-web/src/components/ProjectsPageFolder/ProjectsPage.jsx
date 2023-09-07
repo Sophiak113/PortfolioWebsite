@@ -1,4 +1,4 @@
-import React , {useState} from 'react'
+import React , {useState, useEffect, useRef} from 'react'
 import './Projects.scss';
 
 const projects = [{
@@ -31,17 +31,56 @@ const projects = [{
   link: '',
   src: '',
   alt: ''
-}]
+},
+{
+  id: '3',
+  name: 'APIs',
+  overview: 'Demonstrating my ability to use different types of APIs',
+  myRole: 'From design to coding I did everything on this website!',
+  tools: 'React (jsx), Javascript, css, sass, node, express js, nodemailer',
+  link: '',
+  src: '',
+  alt: ''
+}
+]
 
 
 const ProjectsPage = () => {
   const [showDetail, setShowDetail] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
+  const [isMobileViewport, setIsMobileViewport] = useState(false);
+  const projectsListRef = useRef(null); // Create a reference
 
   const handleClick = (projectId) => {
     setSelectedProjectId(projectId);
     setShowDetail(true);
   };
+
+  useEffect(() => {
+    // Function to check viewport width and set showDetail
+    const checkViewportAndShowDetail = () => {
+      //Get the width of the window
+      const viewportWidth = window.innerWidth;
+      // Access the DOM element using the ref
+      const projectsListElement = projectsListRef.current;
+      
+      // Check if viewport width is greater than 1440 and showDetail is true
+      if (viewportWidth > 1440 && showDetail) {
+        projectsListElement.style.gridColumm = '1'
+        console.log(projectsListElement.style.gridColumm)
+
+      }
+    };
+
+    // Add an event listener to listen for window resize
+    window.addEventListener('resize', checkViewportAndShowDetail);
+
+    // Cleanup the event listener when the component unmounts
+    return () => {
+      window.removeEventListener('resize', checkViewportAndShowDetail);
+    };
+  }, [showDetail]); // This effect runs whenever showDetail changes
+
   return (
     <div className='project-page-container'>
       <div className='header-container'>
@@ -52,8 +91,8 @@ const ProjectsPage = () => {
     </div>
 
     <div className="project-and-detail-container">
-      <div className='projects-list-container'
-      style={{transform: showDetail ? 'gridColumn(1)':'gridColumn(2)'}} >
+      <div className='projects-list-container'   ref={projectsListRef} >
+
                 <ProjectsList
             showDetail={showDetail}
             selectedProjectId={selectedProjectId}
@@ -62,6 +101,8 @@ const ProjectsPage = () => {
       
       
       </div>
+
+      {/* Conditonal rendering, if selectedProject is thruthy renders the detail container with the same id as the project wrapper*/}
       {selectedProjectId && <ProjectDetail project={projects.find((p) => p.id === selectedProjectId)} />}
     </div>
 
@@ -106,18 +147,19 @@ function ProjectDetail({ project }) {
         <p>{project.tools}</p>
       </div>
 
-      {/* Video or img of the project */}
-      <div className="detail-image-wrapper">
-        <img className='detail-img' src={project.src} alt={project.alt} />
-      </div>
-
-      {/* Github Link in the form of a github icon */}
-      <div className="detail-link-wrapper">
-        <h2>LINKS</h2>
-        <div className="card-outline">
-        <a href={project.link} target="_blank">
-                  <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
-              </a>
+      <div className="detail-img-and-link-container">
+        {/* Video or img of the project */}
+        <div className="detail-image-wrapper">
+          <img className='detail-img' src={project.src} alt={project.alt} />
+        </div>
+        {/* Github Link in the form of a github icon */}
+        <div className="detail-link-wrapper">
+          <h2>LINKS</h2>
+          <div className="card-outline">
+          <a href={project.link} target="_blank">
+                    <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
+                </a>
+          </div>
         </div>
       </div>
 

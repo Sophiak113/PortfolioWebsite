@@ -1,11 +1,20 @@
-Immediate To Do
--Create ratings for skills icons
+Priority 1
+-Add a footer
+-2 more media Queries
 -Create express server to send my professional email emails from the contact form using nodemailer
+-Review and comment code
+-Add more projects and qualities then check media queries again
+
+
+
+Priority 2
+-Create ratings for skills icons
 -Create a NavBar
--Media Queries
+-Media Queries for all the other listed breakpoints in MediaQueries.scss
+-Creatin project tools used as each word having a wrapper like projects and qualities on the mobile version
 -Creating animations for the appearance of the detail container on projects page
 
 
-Secondary To Do
--Review and comment code
+Priority 3
 -Create CardLinksIcons as a core component as I have used card-outline in projects github link and skills icons 
+
