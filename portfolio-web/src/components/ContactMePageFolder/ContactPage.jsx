@@ -5,12 +5,12 @@ import './Contact.scss';
 const ContactPage = () => {
 const links = [{
     alt:'Github',
-    src: 'GithubLogo.png',
+    src: '/Logos/GithubLogo.png',
     link: 'https://github.com/Sophiak113'
 },
 {
     alt:'LinkedIn',
-    src: '/LinkedInLogo.png',
+    src: '/Logos/LinkedInLogo.png',
     link: 'https://www.linkedin.com/in/sophia-kinsey-2057871a2/'
 }
 ]

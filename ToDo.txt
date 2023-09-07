@@ -1,0 +1,11 @@
+Immediate To Do
+-Create ratings for skills icons
+-Create express server to send my professional email emails from the contact form using nodemailer
+-Create a NavBar
+-Media Queries
+-Creating animations for the appearance of the detail container on projects page
+
+
+Secondary To Do
+-Review and comment code
+-Create CardLinksIcons as a core component as I have used card-outline in projects github link and skills icons 

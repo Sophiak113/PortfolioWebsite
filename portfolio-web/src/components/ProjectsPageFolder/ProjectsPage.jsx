@@ -18,7 +18,7 @@ const projects = [{
   overview: 'Maze game is a simple game where you move throught the maze to reach the exit ensuring not to touch the walls',
   myRole: 'In this project I worked as part of a team and my designated role was to do the entirety of the maze game from design to mechanics',
   tools: 'Python, Pygame',
-  link: '',
+  link: 'https://github.com/lachlanin4/CapstoneProject3-maze',
   src: '/MazeGameSnippet.png',
   alt: 'Maze Game in action'
 },
@@ -115,8 +115,8 @@ function ProjectDetail({ project }) {
       <div className="detail-link-wrapper">
         <h2>LINKS</h2>
         <div className="card-outline">
-        <a href={project.link}>
-                  <img src='/GithubLogo.png' alt='Link to Github Repo' />
+        <a href={project.link} target="_blank">
+                  <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
               </a>
         </div>
       </div>
