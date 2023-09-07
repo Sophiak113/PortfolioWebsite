@@ -63,11 +63,18 @@ background-color: $purple;
 border: $purple;
 height: 30vh;
 border-radius: 25px;
+padding: 10px;
 }
+
+//Making inputs and button same height and shape
 .contact-form>*:not(textarea){
 height: 5vh;
 border-radius: 30px;
 text-align: center;
+}
+button{
+  background-color: $fuchsia;
+  border: none;
 }
 //Making the placeholder white in all browsers
 //Chrome, Firefox, Opera, Safari 10.1+

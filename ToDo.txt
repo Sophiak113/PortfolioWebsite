@@ -3,6 +3,7 @@ Immediate To Do
 -Create express server to send my professional email emails from the contact form using nodemailer
 -Create a NavBar
 -Media Queries
+-
 -Creating animations for the appearance of the detail container on projects page
 
 

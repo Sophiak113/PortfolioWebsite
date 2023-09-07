@@ -82,22 +82,24 @@ const Skills = (props) => {
     <div className='skills-icon-container'>
         {skills.map((skill)=>(
           <div className="icon-container">
-            <p>{skill.name}</p>
-            {/* Displays my skill level in each skill based on my rating */}
-            {(() => {
-              if (skill.rating === '1') {
-                return <p>Beginner</p>;
-              } else if (skill.rating === '2' || skill.rating === '3') {
-                return <p>Intermediate</p>;
-              } else if (skill.rating === '4') {
-                return <p>Advanced</p>;
-              } else if (skill.rating === '5') {
-                return <p>Expert</p>;
-              } else {
-                // Handle other cases or provide a default value
-                return <h2>Unknown</h2>;
-              }
-            })()}
+            <div className="icon-labels-container">
+              <p>{skill.name}</p>
+              {/* Displays my skill level in each skill based on my rating */}
+              {(() => {
+                if (skill.rating === '1') {
+                  return <p>Beginner</p>;
+                } else if (skill.rating === '2' || skill.rating === '3') {
+                  return <p>Intermediate</p>;
+                } else if (skill.rating === '4') {
+                  return <p>Advanced</p>;
+                } else if (skill.rating === '5') {
+                  return <p>Expert</p>;
+                } else {
+                  // Handle other cases or provide a default value
+                  return <h2>Unknown</h2>;
+                }
+              })()}
+            </div>
             <div className="card-outline">
               <a href={skill.link} target="_blank">
                 <img src={skill.src} alt={skill.alt} />

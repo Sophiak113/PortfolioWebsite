@@ -13,17 +13,37 @@ background-color: $purple;
 border: $purple;
 }
 
+.project-page-container{
+    overflow: visible;
+}
+
+//Grid containing the list and the hidden detail that appears after a list is clicked
 .project-and-detail-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: 1;
-    margin: 5vh 6vw;
+    padding: 5vh 6vw;
 }
+
+//CSS for the detail container (more info about the projects)
+.detail-container{
+    height: fit-content;
+    grid-column: span 2;
+    width: 60vw;
+    background-color: #3B1B72;
+    border-radius: 30px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    margin: 15px;
+    padding: 15px;
+    grid-row: 1;
+}
+
 
 .project-wrapper{
   @include default-list-shape();
   line-height: 5vh;
-  width: 400px;
+  width: 25vw;
   margin: 7px 0px;
 //   This Line height is to vertically center the text
 
@@ -43,24 +63,11 @@ border: $purple;
     grid-row: 1;
 }
 
-//CSS for the detail container (more info about the projects)
-.detail-container{
-    height: fit-content;
-    grid-column: span 2;
-    width: 70vw;
-    background-color: #3B1B72;
-    border-radius: 30px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin: 15px;
-    padding: 15px;
-
-    grid-row: 1;
-}
 
 //overview, my role and tools used positioning css
 .paragraphs-wrapper{
     grid-column: 1;
+    margin-right: 20px;
 
 }
 
@@ -69,6 +76,4 @@ border: $purple;
     border-radius: 30px;
 
 }
-.detail-link-wrapper{
-    grid-column: 2;
-}
+

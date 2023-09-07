@@ -1,11 +1,14 @@
 import Background from './components/Background';
-import './App.scss';
+
 import ContactPage from './components/ContactMePageFolder/ContactPage';
 import HomePage from './components/HomePage';
 import IntroPage from './components/IntroPageFolder/IntroPage';
 import ProjectsPage from './components/ProjectsPageFolder/ProjectsPage';
 import NavBar from './components/NavBar';
 import { Element, Link as ScrollLink } from 'react-scroll';
+import './styles/App.scss';
+import './styles/MediaQueries.scss';
+
 function App() {
   return (
     <div className="App">
@@ -20,7 +23,6 @@ function App() {
 {/* Page container is designed to be the same size as the viewport and allows the pages to be scroll snapped to */}
 
         <HomePage></HomePage>
-        <NavBar />
       </div>
       </Element>
       <Element name="intro">
