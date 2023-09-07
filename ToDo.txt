@@ -8,4 +8,4 @@ Immediate To Do
 
 Secondary To Do
 -Review and comment code
--Create CardLinksIcons as a core component as I have used card-outline in projects github link and skills icons
+-Create CardLinksIcons as a core component as I have used card-outline in projects github link and skills icons 

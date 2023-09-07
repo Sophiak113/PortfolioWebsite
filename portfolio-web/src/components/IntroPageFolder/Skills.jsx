@@ -82,6 +82,8 @@ const Skills = (props) => {
     <div className='skills-icon-container'>
         {skills.map((skill)=>(
           <div className="icon-container">
+            <p>{skill.name}</p>
+            {/* Displays my skill level in each skill based on my rating */}
             {(() => {
               if (skill.rating === '1') {
                 return <p>Beginner</p>;
