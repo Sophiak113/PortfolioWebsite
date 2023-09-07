@@ -24,7 +24,7 @@
 // Screen Width: 1440px and above
 // Common Breakpoint: 1440px, 1600px, 1920px
 
-//Mobile media query
+//Mobile media query for 480px Portrait
 @media(max-width: 480px){
     //For mobile everything will be changed to a stacked layout
   
@@ -127,6 +127,9 @@
         width: 85%;
 
     }
+
+    //Contact me mobile styling
+    
 
   
   }
