@@ -4,8 +4,8 @@ import ContactPage from './components/ContactMePageFolder/ContactPage';
 import HomePage from './components/HomePage';
 import IntroPage from './components/IntroPageFolder/IntroPage';
 import ProjectsPage from './components/ProjectsPageFolder/ProjectsPage';
-import NavBar from './components/NavBar';
 import { Element, Link as ScrollLink } from 'react-scroll';
+import Footer from './components/Footer';
 import './styles/App.scss';
 import './styles/MediaQueries.scss';
 
@@ -38,8 +38,12 @@ function App() {
       <Element name="contactMe">
       <div className="page-container">
         <ContactPage></ContactPage>
+        <Footer></Footer>
       </div>
       </Element>
+
+      
+
     </div>
   );
 }

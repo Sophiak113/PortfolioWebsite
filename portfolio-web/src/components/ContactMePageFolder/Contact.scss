@@ -51,7 +51,7 @@ justify-content: center;
 //Controls size of input boxes
 .contact-form-container{
 width: 20vw;
-height: 60vh;
+height: fit-content;
 }
 
 //Making contact form look pretty
@@ -62,7 +62,7 @@ border: $purple;
 textarea{
 background-color: $purple;
 border: $purple;
-height: 30vh;
+height: 20vh;
 border-radius: 25px;
 padding: 20px;
 }
@@ -91,3 +91,4 @@ color: white;
 ::-ms-input-placeholder { /* Microsoft Edge */
 color: white;
 }
+
