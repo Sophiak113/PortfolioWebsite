@@ -7,7 +7,9 @@ const HomePage = () => {
       <div className="title-wrapper">
         <img src="/Title.png" alt="Sophia Kinsey - Software Engineer" />
       </div>
-      <NavBar></NavBar>
+      <div className="header-nav">
+        <NavBar></NavBar>
+      </div>
       </div>
   )
 }
