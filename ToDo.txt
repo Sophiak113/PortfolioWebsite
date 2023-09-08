@@ -1,15 +1,14 @@
 Priority 1
--Add a footer
 -2 more media Queries
 -Create express server to send my professional email emails from the contact form using nodemailer
 -Review and comment code
 -Add more projects and qualities then check media queries again
-
+-Integrate some sort of API into the project
 
 
 Priority 2
 -Create ratings for skills icons
--Create a NavBar
+-Create a NavBar on every page
 -Media Queries for all the other listed breakpoints in MediaQueries.scss
 -Creatin project tools used as each word having a wrapper like projects and qualities on the mobile version
 -Creating animations for the appearance of the detail container on projects page
@@ -18,4 +17,13 @@ Priority 2
 Priority 3
 -Create CardLinksIcons as a core component as I have used card-outline in projects github link and skills icons
 -Do I need a contact form now that I know mailto: exists
+-Add filters for my projects so they're ordered by dates or something
 
+
+
+
+
+
+
+Checked Off
+-Add a footer
