@@ -116,6 +116,31 @@ nav>p:hover a{
   color: $fuchsia;
 }
 
+//Styling Footer
+footer{
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.207);
+  justify-content: center;
+  gap: 10vw;
+  padding: 30px;
+  translate: 0px 50px;
+
+  // bottom didn't work to position the footer so I used translateY
+}
+.footer-container>*>*{
+  margin: 0px;
+}
+.footer-copyright>p{
+  margin: 0;
+}
+.footer-nav>nav>*{
+  margin: 0;
+}
+
+.footer-nav>nav>h1{
+  display: none;
+}
+
 
 
 

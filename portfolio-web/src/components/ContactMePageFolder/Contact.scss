@@ -92,30 +92,3 @@ color: white;
 color: white;
 }
 
-//Styling Footer
-footer{
-  display: flex;
-  background-color: rgba(0, 0, 0, 0.207);
-  justify-content: center;
-  gap: 10vw;
-  padding: 30px;
-  
-
-}
-.footer-container{
-  bottom: 0;
-}
-.footer-container>*>*{
-  margin: 0px;
-}
-.footer-copyright>p{
-  margin: 0;
-}
-.footer-nav>nav>*{
-  margin: 0;
-}
-
-.footer-nav>nav>h1{
-  display: none;
-}
-

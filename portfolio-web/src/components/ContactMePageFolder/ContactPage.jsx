@@ -1,6 +1,6 @@
 import React from 'react';
 import LinkList from './LinkList';
-import Footer from './Footer';
+import Footer from '../Footer';
 import './Contact.scss';
 
 const ContactPage = () => {
@@ -38,7 +38,6 @@ const links = [{
           <LinkList links={links} />
         </div>
       </div>
-      <Footer></Footer>
       
 
     </div>
