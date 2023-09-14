@@ -13,13 +13,14 @@ function App() {
   return (
     <div className="App">
 
-      <Background/>
+      
 
  {/* Surrounding page-container and it's content in react-scroll's Element */}
  {/* so when a nav link is clicked it scrolls to the section */}
       <Element name="home">
-
-      <div className="page-container">
+      {/* Giving the first page container an ID so I can put it in a :not selector */}
+      <div className="page-container" id='first-page-container'>
+      <Background/>
 {/* Page container is designed to be the same size as the viewport and allows the pages to be scroll snapped to */}
 
         <HomePage></HomePage>

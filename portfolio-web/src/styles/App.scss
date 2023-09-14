@@ -30,6 +30,8 @@
 $pink:#F29CED;
 $fuchsia: #FF037A;
 $purple:#3B1B72;
+$navy: #120359;
+$darkerNavy: #05001c;
 $standardFontSize:calc(1vw + 3px);
 $h2FontSize:50px;
 
@@ -94,6 +96,18 @@ html,body{
   overflow: hidden;
 }
 
+
+
+
+.page-container:not(#first-page-container){
+  background: linear-gradient(45deg,transparent 0%, transparent 5%, $navy 5%, $navy 95% , transparent 95%, transparent 100%)
+
+}
+
+// .page-container:not(#first-page-container){
+//   background: repeating-linear-gradient(to bottom, $darkerNavy, $darkerNavy, $navy, transparent)
+
+// }
 
 .header-wrapper{
   width: 100%;

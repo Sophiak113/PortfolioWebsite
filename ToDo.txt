@@ -4,6 +4,7 @@ Priority 1
 -Review and comment code
 -Add more projects and qualities then check media queries again
 -Integrate some sort of API into the project
+-I want to change my website so that the background looks less busy for the informational pages but there's still a little bit of movement
 
 
 Priority 2
