@@ -30,8 +30,7 @@
 $pink:#F29CED;
 $fuchsia: #FF037A;
 $purple:#3B1B72;
-$navy: #120359;
-$darkerNavy: #05001c;
+$navy: #11025C;
 $standardFontSize:calc(1vw + 3px);
 $h2FontSize:50px;
 
@@ -100,7 +99,7 @@ html,body{
 
 
 .page-container:not(#first-page-container){
-  background: linear-gradient(45deg,transparent 0%, transparent 5%, $navy 5%, $navy 95% , transparent 95%, transparent 100%)
+  background-color: $navy;
 
 }
 
