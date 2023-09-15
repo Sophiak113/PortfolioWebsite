@@ -10,6 +10,7 @@ const HomePage = () => {
       <div className="header-nav">
         <NavBar></NavBar>
       </div>
+
       </div>
   )
 }

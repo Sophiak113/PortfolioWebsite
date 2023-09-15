@@ -81,27 +81,40 @@ justify-content: center;
 }
 
 html,body{
-  // enables scrollsnap
-  scroll-snap-type:y mandatory;
+  // // enables scrollsnap
+  // scroll-snap-type:y mandatory;
   margin: 0;
   /* change the above to y proximity if scroll snapping is too jarring */
 }
 
-.page-container{
-  /* Styles for all but the last .page-container */
+// .page-container{
+//   /* Styles for all but the last .page-container */
+//   height: 100vh;
+//   width: 100%;
+//   scroll-snap-align: center;
+//   overflow: hidden;
+// }
+
+// Homepage styling
+.home-page-container{
+  // The below is to generate a very subtle gradient for the homepage
+  //becomes more opaque toward bottom to draw the eye downwards
+  $base-color: $navy;
+  $gradient-stops: ();
+  $stop-count: 22;
+
+  @for $i from 0 through $stop-count {
+    $opacity: ($i * 0.05);
+    $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
+  }
+
+  background: linear-gradient(to bottom, $gradient-stops);
   height: 100vh;
-  width: 100%;
-  scroll-snap-align: center;
   overflow: hidden;
+
+
 }
 
-
-
-
-.page-container:not(#first-page-container){
-  background-color: $navy;
-
-}
 
 // .page-container:not(#first-page-container){
 //   background: repeating-linear-gradient(to bottom, $darkerNavy, $darkerNavy, $navy, transparent)
@@ -128,6 +141,30 @@ html,body{
 nav>p:hover a{
   color: $fuchsia;
 }
+
+//Styling body container which contains intro projects and contact me
+.body-container {
+
+  width: 100%;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.fixed-image {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 50px; /* Adjust the width as needed */
+  background-size: cover;
+}
+
+
+.scrollable-container {
+  margin: 0 50px; /* Adjust the margin to match the width of the fixed images */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  height: 100vh; /* Set the height as needed */
+}
+
 
 //Styling Footer
 footer{

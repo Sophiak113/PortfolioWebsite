@@ -26,22 +26,24 @@ function App() {
         <HomePage></HomePage>
       </div>
       </Element>
-      <Element name="intro">
-      <div className="page-container">
-        <IntroPage></IntroPage>
+
+      <div className="body-container">
+      <div class="fixed-image purple-square"></div>
+        <div className="scrollable-container">
+        <Element name="intro">
+          <IntroPage></IntroPage>
+        </Element>
+        <Element name="projects">
+          <ProjectsPage></ProjectsPage>
+        </Element>
+        <Element name="contactMe">
+          <ContactPage></ContactPage>
+          </Element>
+          </div>
       </div>
-      </Element>
-      <Element name="projects">
-      <div className="page-container">
-        <ProjectsPage></ProjectsPage>
-      </div>
-      </Element>
-      <Element name="contactMe">
-      <div className="page-container">
-        <ContactPage></ContactPage>
+
         <Footer></Footer>
-      </div>
-      </Element>
+      
 
       
 
