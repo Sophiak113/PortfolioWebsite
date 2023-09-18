@@ -81,8 +81,8 @@ justify-content: center;
 }
 
 html,body{
-  // // enables scrollsnap
-  // scroll-snap-type:y mandatory;
+  // enables scrollsnap
+  scroll-snap-type:y mandatory;
   margin: 0;
   /* change the above to y proximity if scroll snapping is too jarring */
 }
@@ -99,6 +99,7 @@ html,body{
 .home-page-container{
   // The below is to generate a very subtle gradient for the homepage
   //becomes more opaque toward bottom to draw the eye downwards
+  scroll-snap-align: center;
   $base-color: $navy;
   $gradient-stops: ();
   $stop-count: 22;
@@ -144,25 +145,100 @@ nav>p:hover a{
 
 //Styling body container which contains intro projects and contact me
 .body-container {
-
   width: 100%;
   overflow: hidden;
   height: 100vh;
+  background-color: $navy;
+  scroll-snap-align: center;
 }
 
+//Styling for the framing images for the scrollable container
+.framing-imgs{
+  position: relative;
+  height: 30vh;
+  
+}
+.bot-frame{
+  $base-color: $navy;
+  $gradient-stops: ();
+  $stop-count: 4;
+
+  @for $i from 0 through $stop-count {
+    $opacity: ($i * 1.5);
+    $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
+  }
+
+  background: linear-gradient(to bottom, $gradient-stops);
+  transform: translateY(-30vh);
+}
+.top-frame{
+  height: 15vh;
+  $base-color: $navy;
+  $gradient-stops: ();
+  $stop-count: 20;
+
+  @for $i from 0 through $stop-count {
+    $opacity: ($i * 0.1);
+    $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
+  }
+
+  background: linear-gradient(to top, $gradient-stops);
+  z-index: 1;
+}
 .fixed-image {
-  position: fixed;
-  top: 0;
-  height: 100%;
-  width: 50px; /* Adjust the width as needed */
-  background-size: cover;
+  position: absolute;
+
 }
 
+.top-left{
+  top: 0;
+}
+#top-left-1{
+  width: 10vh;
+}
+#top-left-2{
+  width: 7vh;
+}
+#top-left-3{
+  width: 4vh;
+}
+.top-right{
+  top: 0;
+  right: 0;
+}
+#top-right-1{
+  width: 11vh;
+}
+#top-right-2{
+  width: 8vh;
+}
+.bot-left{
+  top: 0;
+}
+#bot-left-1{
+  width: 12vh;
+}
+#bot-left-2{
+  width: 6vh;
+}
+.bot-right{
+  right: 0;
+}
+#bot-right-1{
+  width: 10vh;
+}
+#bot-right-2{
+  width: 8vh;
+}
+#bot-right-3{
+  width: 5vh;
+}
 
 .scrollable-container {
-  margin: 0 50px; /* Adjust the margin to match the width of the fixed images */
+  margin: 0 ; /* Adjust the margin to match the width of the fixed images */
   overflow-y: scroll; /* Enable vertical scrolling */
   height: 100vh; /* Set the height as needed */
+  transform: translateY(-15vh);
 }
 
 

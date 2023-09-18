@@ -1,5 +1,6 @@
 import Background from './components/Background';
-
+import FixedImagesTop from './components/FixedImagesTop';
+import FixedImagesBot from './components/FixedImagesBot';
 import ContactPage from './components/ContactMePageFolder/ContactPage';
 import HomePage from './components/HomePage';
 import IntroPage from './components/IntroPageFolder/IntroPage';
@@ -28,7 +29,8 @@ function App() {
       </Element>
 
       <div className="body-container">
-      <div class="fixed-image purple-square"></div>
+      <FixedImagesTop/>
+
         <div className="scrollable-container">
         <Element name="intro">
           <IntroPage></IntroPage>
@@ -38,11 +40,13 @@ function App() {
         </Element>
         <Element name="contactMe">
           <ContactPage></ContactPage>
+          <Footer></Footer>
           </Element>
           </div>
+          <FixedImagesBot></FixedImagesBot>
       </div>
 
-        <Footer></Footer>
+        
       
 
       
