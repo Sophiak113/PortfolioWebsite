@@ -169,7 +169,7 @@ nav>p:hover a{
   }
 
   background: linear-gradient(to bottom, $gradient-stops);
-  transform: translateY(-30vh);
+  transform: translateY(-37vh);
 }
 .top-frame{
   height: 15vh;
@@ -192,25 +192,38 @@ nav>p:hover a{
 
 .top-left{
   top: 0;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-columns: 2;
 }
 #top-left-1{
   width: 10vh;
+  rotate: 300deg;
+  margin: 5px 0 0 10px;
 }
 #top-left-2{
   width: 7vh;
+  grid-row: 1;
+  grid-column: 2;
+  rotate: 270deg;
 }
 #top-left-3{
-  width: 4vh;
+  width: 5vh;
+  rotate: 315deg;
+  margin: 0px 0 0px 10px;
 }
 .top-right{
   top: 0;
   right: 0;
 }
 #top-right-1{
-  width: 11vh;
+  width: 8vh;
+  rotate: 120deg;
+
 }
 #top-right-2{
-  width: 8vh;
+  width: 11vh;
+  rotate:70deg;
 }
 .bot-left{
   top: 0;
@@ -238,6 +251,7 @@ nav>p:hover a{
   margin: 0 ; /* Adjust the margin to match the width of the fixed images */
   overflow-y: scroll; /* Enable vertical scrolling */
   height: 100vh; /* Set the height as needed */
+  padding-top: 7vh;
   transform: translateY(-15vh);
 }
 

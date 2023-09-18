@@ -5,7 +5,7 @@ const FixedImagesTop = () => {
     <div className='top-frame framing-imgs'>
         <div className="fixed-image top-left">
             <img id='top-left-1' src="/Shapes/PurpleSquare.png" alt="" />
-            <img id='top-left-2' src="/Shapes/PurpleSquare.png" alt="" />
+            {/* <img id='top-left-2' src="/Shapes/PurpleSquare.png" alt="" /> */}
             <img id='top-left-3' src="/Shapes/PurpleSquare.png" alt="" />
 
         </div>
