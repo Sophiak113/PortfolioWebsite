@@ -1,17 +1,18 @@
-//Sass variables
-$pink:#F29CED;
-$fuchsia: #FF037A;
-$purple:#3B1B72;
-$standardFontSize:calc(1vw + 3px);
-$h2FontSize:50px;
+// //Sass variables
+// $pink:#F29CED;
+// $fuchsia: #FF037A;
+// $purple:#3B1B72;
+// $standardFontSize:calc(1vw + 3px);
+// $h2FontSize:50px;
 
-@mixin default-list-shape{
-    height: 5vh;
-border-radius: 30px;
-text-align: center;
-background-color: $purple;
-border: $purple;
-}
+// @mixin default-list-shape{
+//     height: 5vh;
+// border-radius: 30px;
+// text-align: center;
+// background-color: $purple;
+// border: $purple;
+// }
+@import '../styles/Variables';
 
 .project-page-container{
     overflow: visible;

@@ -1,0 +1,18 @@
+//Sass variables
+$pink:#F29CED;
+$fuchsia: #FF037A;
+$purple:#3B1B72;
+$navy: #11025C;
+$darkerNavy: #050021;
+$turquoise: #14FC9D;
+$standardFontSize:calc(1vw + 3px);
+$h2FontSize:50px;
+
+@mixin default-list-shape{
+  height: 5vh;
+border-radius: 30px;
+text-align: center;
+background-color: $purple;
+border: $purple;
+box-shadow: 5px 5px 5px white;
+}

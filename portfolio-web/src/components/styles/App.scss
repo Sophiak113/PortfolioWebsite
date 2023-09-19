@@ -26,22 +26,27 @@
 
 /* Above is original react css i thought there might be some useful things */
 
-//Sass variables
-$pink:#F29CED;
-$fuchsia: #FF037A;
-$purple:#3B1B72;
-$navy: #11025C;
-$standardFontSize:calc(1vw + 3px);
-$h2FontSize:50px;
+@import 'Variables';
 
-@mixin default-list-shape{
-  height: 5vh;
-border-radius: 30px;
-text-align: center;
-background-color: $purple;
-border: $purple;
+/* Apply styles to scrollbar in the body element */
+body::-webkit-scrollbar {
+  width: 20px; /* Width of the scrollbar */
 }
 
+body::-webkit-scrollbar-thumb {
+  background: $darkerNavy; /* Color of the thumb */
+  border-radius: 10px; /* Round the thumb */
+}
+
+body::-webkit-scrollbar-track {
+  background: $navy; /* Color of the track */
+}
+
+/* Change the color of the scrollbar arrows */
+body::-webkit-scrollbar-button {
+  background: $navy; /* Color of the arrows */
+  display: none;
+}
 
 //imported font and making all general text white
 *{
@@ -156,6 +161,7 @@ nav>p:hover a{
 .framing-imgs{
   position: relative;
   height: 30vh;
+  overflow: visible;
   
 }
 .bot-frame{
@@ -215,10 +221,13 @@ nav>p:hover a{
 .top-right{
   top: 0;
   right: 0;
+  transform: translateX(3vw);
 }
 #top-right-1{
-  width: 8vh;
+  width: 6vh;
   rotate: 120deg;
+  margin-bottom: 3vh;
+  margin-right: 1vw;
 
 }
 #top-right-2{
@@ -226,33 +235,70 @@ nav>p:hover a{
   rotate:70deg;
 }
 .bot-left{
+  display: flex;
+  flex-direction: column;
   top: 0;
-}
-#bot-left-1{
-  width: 12vh;
+  transform: translateY(-7vh);
 }
 #bot-left-2{
+  width: 12vh;
+  margin: 0 0 0 5px;
+  rotate: 350deg;
+}
+#bot-left-1{
   width: 6vh;
+  rotate: 90deg;
+  margin: 0 0 4vh 5px;
 }
 .bot-right{
   right: 0;
+  display: grid;
+  grid-template-columns: 2;
+  grid-template-rows: 2;
+  transform: translateY(-5vh);
 }
 #bot-right-1{
-  width: 10vh;
+  width: 13vh;
+  grid-column: 2;
+  grid-row: 2;
+  rotate: 305deg;
 }
 #bot-right-2{
   width: 8vh;
+  grid-column: 1;
+  grid-row: 2;
+  rotate: 350deg;
+  margin: 4vh 0 0 0;
+  transform: translateX(2.5vw);
 }
 #bot-right-3{
   width: 5vh;
+  grid-column: 2;
+  grid-row: 1;
+  rotate: 350deg;
+  margin: 0 0 0 5vw;
+  transform: translateY(0.5vh);
 }
 
 .scrollable-container {
-  margin: 0 ; /* Adjust the margin to match the width of the fixed images */
+  margin: 0 5vh ; /* Adjust the margin to match the width of the fixed images */
   overflow-y: scroll; /* Enable vertical scrolling */
   height: 100vh; /* Set the height as needed */
   padding-top: 7vh;
   transform: translateY(-15vh);
+  /* Hide scrollbar for Firefox */
+  scrollbar-width: none;
+  /* Hide scrollbar for WebKit-based browsers (like Chrome and Safari) */
+  scrollbar-color: transparent transparent;
+}
+/* Hide scrollbar thumb on WebKit-based browsers (like Chrome and Safari) */
+.scrollable-container::-webkit-scrollbar {
+  width: 0.1em;
+}
+
+/* Hide scrollbar track on WebKit-based browsers (like Chrome and Safari) */
+.scrollable-container::-webkit-scrollbar-track {
+  background: transparent;
 }
 
 
