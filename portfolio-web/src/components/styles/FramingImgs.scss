@@ -1,0 +1,135 @@
+@import 'Variables';
+//Styling for the framing images for the scrollable container
+.framing-imgs{
+    position: relative;
+    height: 30vh;
+    overflow: visible;
+    
+  }
+  .bot-frame{
+    $base-color: $navy;
+    $gradient-stops: ();
+    $stop-count: 10;
+  
+    @for $i from 0 through $stop-count {
+      $opacity: ($i * 1.5);
+      $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
+    }
+  
+    background: linear-gradient(to bottom, $gradient-stops);
+    margin-top: -30vh;
+  }
+  .top-frame{
+    height: 15vh;
+    $base-color: $navy;
+    $gradient-stops: ();
+    $stop-count: 20;
+  
+    @for $i from 0 through $stop-count {
+      $opacity: ($i * 0.1);
+      $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
+    }
+  
+    background: linear-gradient(to top, $gradient-stops);
+    z-index: 1;
+  }
+  .fixed-image {
+    position: absolute;
+  
+  }
+  
+  @keyframes wiggle {
+    0%, 100%{
+        transform: translate(0);
+    }
+    50%{
+        transform: translate(1vh );
+    }
+    
+  }
+  .top-left,.bot-left,.bot-right,.top-right{
+    animation: wiggle 20s infinite alternate;
+  }
+  .top-left{
+    top: 0;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-columns: 2;
+  }
+  #top-left-1{
+    width: 10vw;
+    rotate: 300deg;
+    margin: 5px 0 0 10px;
+  }
+  #top-left-2{
+    width: 7vw;
+    grid-row: 1;
+    grid-column: 2;
+    rotate: 270deg;
+  }
+  #top-left-3{
+    width: 5vw;
+    rotate: 315deg;
+    margin: 0px 0 0px 10px;
+  }
+  .top-right{
+    top: 0;
+    right: 0;
+    transform: translateX(3vw);
+  }
+  #top-right-1{
+    width: 6vw;
+    rotate: 120deg;
+    margin-bottom: 3vh;
+    margin-right: 1vw;
+  
+  }
+  #top-right-2{
+    width: 11vw;
+    rotate:70deg;
+  }
+  .bot-left{
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    margin-top: -7vh;
+  }
+  #bot-left-2{
+    width: 12vw;
+    margin: 0 0 0 5px;
+    rotate: 350deg;
+  }
+  #bot-left-1{
+    width: 6vw;
+    rotate: 90deg;
+    margin: 0 0 4vh 5px;
+  }
+  .bot-right{
+    right: 0;
+    display: grid;
+    grid-template-columns: 2;
+    grid-template-rows: 2;
+    margin-top: -5vh;
+  }
+  #bot-right-1{
+    width: 13vw;
+    grid-column: 2;
+    grid-row: 2;
+    rotate: 305deg;
+  }
+  #bot-right-2{
+    width: 8vw;
+    grid-column: 1;
+    grid-row: 2;
+    rotate: 350deg;
+    margin: 4vh 0 0 0;
+    transform: translateX(2.5vw);
+  }
+  #bot-right-3{
+    width: 5vw;
+    grid-column: 2;
+    grid-row: 1;
+    rotate: 350deg;
+    margin: 0 0 0 5vw;
+    transform: translateY(0.5vh);
+  }

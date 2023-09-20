@@ -2,6 +2,7 @@
 $pink:#F29CED;
 $fuchsia: #FF037A;
 $purple:#3B1B72;
+$neonPurple: #692FFF;
 $navy: #11025C;
 $darkerNavy: #050021;
 $turquoise: #14FC9D;
@@ -14,5 +15,20 @@ border-radius: 30px;
 text-align: center;
 background-color: $purple;
 border: $purple;
-box-shadow: 5px 5px 5px white;
+box-shadow: 5px 5px 5px purple;
+};
+
+h2{
+ text-shadow:  2px 1px 0px $turquoise;
+ text-align: center;
+}
+
+h3{
+  color: white;
+  font-size: 12vw;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1vw;
+  text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $turquoise;
+  margin: 3vh 0 0 0;
 }

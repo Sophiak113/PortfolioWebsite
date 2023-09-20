@@ -7,8 +7,9 @@ import IntroPage from './components/IntroPageFolder/IntroPage';
 import ProjectsPage from './components/ProjectsPageFolder/ProjectsPage';
 import { Element, Link as ScrollLink } from 'react-scroll';
 import Footer from './components/Footer';
-import './styles/App.scss';
-import './styles/MediaQueries.scss';
+import './components/styles/FramingImgs.scss';
+import './components/styles/App.scss';
+import './components/styles/MediaQueries.scss';
 
 function App() {
   return (

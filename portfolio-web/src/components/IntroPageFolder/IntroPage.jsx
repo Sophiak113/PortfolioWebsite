@@ -7,9 +7,10 @@ const IntroPage = () => {
   return (
     <div>
         <div className='header-container'>
-            <div className='header-wrapper'>
+            {/* <div className='header-wrapper'>
                 <img src="/IntroHeader.png" alt="Intro" />
-            </div>
+            </div> */}
+            <h3>INTRO</h3>
         </div>
         <div className="intro-body-container">
             <div className='about-me-container'>

@@ -28,10 +28,7 @@
 @media(max-width: 480px){
     //For mobile everything will be changed to a stacked layout
   
-    //Getting rid of scroll snapping so everything fits on the page but keeping the home page the same height
-    html,body{
-      scroll-snap-type: none;
-    }
+
   
     .home-page-container{
       height: 100vh;

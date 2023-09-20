@@ -153,135 +153,15 @@ nav>p:hover a{
   width: 100%;
   overflow: hidden;
   height: 100vh;
-  background-color: $navy;
+
+  background: radial-gradient(circle,lighten($navy,8%), $navy 50% 100% );
   scroll-snap-align: center;
 }
 
-//Styling for the framing images for the scrollable container
-.framing-imgs{
-  position: relative;
-  height: 30vh;
-  overflow: visible;
-  
-}
-.bot-frame{
-  $base-color: $navy;
-  $gradient-stops: ();
-  $stop-count: 4;
 
-  @for $i from 0 through $stop-count {
-    $opacity: ($i * 1.5);
-    $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
-  }
-
-  background: linear-gradient(to bottom, $gradient-stops);
-  transform: translateY(-37vh);
-}
-.top-frame{
-  height: 15vh;
-  $base-color: $navy;
-  $gradient-stops: ();
-  $stop-count: 20;
-
-  @for $i from 0 through $stop-count {
-    $opacity: ($i * 0.1);
-    $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
-  }
-
-  background: linear-gradient(to top, $gradient-stops);
-  z-index: 1;
-}
-.fixed-image {
-  position: absolute;
-
-}
-
-.top-left{
-  top: 0;
-  display: grid;
-  grid-template-columns: 2;
-  grid-template-columns: 2;
-}
-#top-left-1{
-  width: 10vh;
-  rotate: 300deg;
-  margin: 5px 0 0 10px;
-}
-#top-left-2{
-  width: 7vh;
-  grid-row: 1;
-  grid-column: 2;
-  rotate: 270deg;
-}
-#top-left-3{
-  width: 5vh;
-  rotate: 315deg;
-  margin: 0px 0 0px 10px;
-}
-.top-right{
-  top: 0;
-  right: 0;
-  transform: translateX(3vw);
-}
-#top-right-1{
-  width: 6vh;
-  rotate: 120deg;
-  margin-bottom: 3vh;
-  margin-right: 1vw;
-
-}
-#top-right-2{
-  width: 11vh;
-  rotate:70deg;
-}
-.bot-left{
-  display: flex;
-  flex-direction: column;
-  top: 0;
-  transform: translateY(-7vh);
-}
-#bot-left-2{
-  width: 12vh;
-  margin: 0 0 0 5px;
-  rotate: 350deg;
-}
-#bot-left-1{
-  width: 6vh;
-  rotate: 90deg;
-  margin: 0 0 4vh 5px;
-}
-.bot-right{
-  right: 0;
-  display: grid;
-  grid-template-columns: 2;
-  grid-template-rows: 2;
-  transform: translateY(-5vh);
-}
-#bot-right-1{
-  width: 13vh;
-  grid-column: 2;
-  grid-row: 2;
-  rotate: 305deg;
-}
-#bot-right-2{
-  width: 8vh;
-  grid-column: 1;
-  grid-row: 2;
-  rotate: 350deg;
-  margin: 4vh 0 0 0;
-  transform: translateX(2.5vw);
-}
-#bot-right-3{
-  width: 5vh;
-  grid-column: 2;
-  grid-row: 1;
-  rotate: 350deg;
-  margin: 0 0 0 5vw;
-  transform: translateY(0.5vh);
-}
 
 .scrollable-container {
-  margin: 0 5vh ; /* Adjust the margin to match the width of the fixed images */
+  margin: 0 7vw ; /* Adjust the margin to match the width of the fixed images */
   overflow-y: scroll; /* Enable vertical scrolling */
   height: 100vh; /* Set the height as needed */
   padding-top: 7vh;
