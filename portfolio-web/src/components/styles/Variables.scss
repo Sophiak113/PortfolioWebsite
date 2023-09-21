@@ -31,4 +31,30 @@ h3{
   letter-spacing: 1vw;
   text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $turquoise;
   margin: 3vh 0 0 0;
+  animation: glitch-cycle 5s infinite;
+
 }
+
+@keyframes glitch-cycle {
+  0% {
+    animation: none;
+  }
+  95% {
+    animation: none; 
+  }
+  100% {
+    animation: glitch 1ms steps(5) 1; /* Glitch animation for 1ms */
+  }
+}
+
+@keyframes glitch {
+  0%{
+    text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $turquoise;
+
+  }
+  40%, 60%{
+    text-shadow: -5px 0 0 $fuchsia, 5px 0px 0  $turquoise;
+  }
+
+}
+
