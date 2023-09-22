@@ -25,26 +25,23 @@ h2{
 
 h3{
   color: white;
-  font-size: 12vw;
+  font-size: 8vh;
   text-align: center;
   font-weight: 700;
   letter-spacing: 1vw;
-  text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $turquoise;
+
   margin: 3vh 0 0 0;
-  animation: glitch-cycle 5s infinite;
 
 }
 
-@keyframes glitch-cycle {
-  0% {
-    animation: none;
-  }
-  95% {
-    animation: none; 
-  }
-  100% {
-    animation: glitch 1ms steps(5) 1; /* Glitch animation for 1ms */
-  }
+// For creating a glitch effect
+.glitch{
+  // Defining inital state of all glitch text
+  text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $turquoise;
+}
+.glitching{
+  // Apply glitch efffect
+  animation: glitch 50ms steps(5) infinite;
 }
 
 @keyframes glitch {
@@ -54,6 +51,7 @@ h3{
   }
   40%, 60%{
     text-shadow: -5px 0 0 $fuchsia, 5px 0px 0  $turquoise;
+    transform: skewX(5deg);
   }
 
 }

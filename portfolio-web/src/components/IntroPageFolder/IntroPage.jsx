@@ -1,4 +1,5 @@
 import React from 'react';
+import GlitchText from '../GlitchText';
 import './Intro.scss';
 import Skills from './Skills';
 
@@ -10,7 +11,7 @@ const IntroPage = () => {
             {/* <div className='header-wrapper'>
                 <img src="/IntroHeader.png" alt="Intro" />
             </div> */}
-            <h3>INTRO</h3>
+            <GlitchText tag='h3' text='INTRO'></GlitchText>
         </div>
         <div className="intro-body-container">
             <div className='about-me-container'>
