@@ -21,6 +21,13 @@ box-shadow: 5px 5px 5px purple;
 h2{
  text-shadow:  2px 1px 0px $turquoise;
  text-align: center;
+
+ font-family: 'Bungee Inline', cursive;
+ font-family: 'Bungee Shade', cursive;
+ font-family: 'Kodchasan', sans-serif;
+ font-weight: 200;
+
+
 }
 
 h3{
@@ -29,8 +36,22 @@ h3{
   text-align: center;
   font-weight: 700;
   letter-spacing: 1vw;
-
   margin: 3vh 0 0 0;
+
+  // Deciding which fonts look best
+  font-family: 'Bagel Fat One', cursive;
+  font-family: 'Bungee Inline', cursive;
+  font-family: 'Bungee Shade', cursive;
+
+
+
+}
+
+p{
+  font-family: 'Bungee Inline', cursive;
+  font-family: 'Kodchasan', sans-serif;
+
+
 
 }
 
