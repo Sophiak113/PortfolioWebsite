@@ -1,4 +1,5 @@
 import React from 'react';
+import GlitchText from '../GlitchText';
 import LinkList from './LinkList';
 import Footer from '../Footer';
 import './Contact.scss';
@@ -19,12 +20,15 @@ const links = [{
     <div className='contact-container'>
       <div className='header-container'>
             <div className='header-wrapper'>
-                <img src="/ContactMeHeader.png" alt="Contact Me" />
+                {/* <img src="/ContactMeHeader.png" alt="Contact Me" /> */}
+                <GlitchText tag='h3'text='CONTACT ME'></GlitchText>
             </div>
         </div>
       <div className="contact-body-container">
         <div className="contact-form-container">
-          <h2>Send me an email</h2>
+          {/* <h2>Send me an email</h2> */}
+          <GlitchText tag='h2' text='SEND ME AN EMAIL'></GlitchText>
+
           <form className='contact-form' action="">
             <input type="text" placeholder='Email' />
             <input type="text" name="" placeholder='Name' />
@@ -34,7 +38,8 @@ const links = [{
           </form>
         </div>
         <div className="links-container">
-          <h2>Links</h2>
+          {/* <h2>Links</h2> */}
+          <GlitchText tag='h2' text='LINKS'></GlitchText>
           <LinkList links={links} />
         </div>
       </div>

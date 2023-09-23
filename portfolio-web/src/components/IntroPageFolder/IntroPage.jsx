@@ -16,7 +16,8 @@ const IntroPage = () => {
         <div className="intro-body-container">
             <div className='about-me-container'>
                 <div className='about-me-header-wrapper'>
-                    <h2>ABOUT ME</h2>
+                    {/* <h2>ABOUT ME</h2> */}
+                    <GlitchText tag='h2' text='ABOUT ME'></GlitchText>
                 </div>
                 <div className="about-me-body-wrapper">
                     <p>Hi I'm Sophia, I'm a software engineer.
@@ -25,7 +26,9 @@ const IntroPage = () => {
             </div>
             <div className='skills-container'>
                 <div className="skills-header-wrapper">
-                    <h2>SKILLS</h2>
+                    {/* <h2>SKILLS</h2> */}
+                    <GlitchText tag='h2' text='SKILLS'></GlitchText>
+
                 </div>
                 <div className='skills-body-wrapper'>
                     <Skills></Skills>
@@ -33,7 +36,9 @@ const IntroPage = () => {
             </div>
             <div className='qualities-container'>
                 <div className="qualities-header-wrapper">
-                    <h2>QUALITIES</h2>
+                    {/* <h2>QUALITIES</h2> */}
+                    <GlitchText tag='h2' text='QUALITIES'></GlitchText>
+
                 </div>
                 <div className="qualities-body-wrapper">
                     {qualities.map((quality)=> (

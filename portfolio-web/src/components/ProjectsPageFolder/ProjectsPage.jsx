@@ -1,6 +1,8 @@
 import React , {useState, useEffect, useRef} from 'react'
+import GlitchText from '../GlitchText';
 import './Projects.scss';
 
+// Array containing project objects - info about projects I have done
 const projects = [{
   id: '0',
   name: 'Recipe Manager',
@@ -85,7 +87,9 @@ const ProjectsPage = () => {
     <div className='project-page-container'>
       <div className='header-container'>
             <div className='header-wrapper'>
-                <img src="/ProjectHeader.png" alt="Projects" />
+                {/* <img src="/ProjectHeader.png" alt="Projects" /> */}
+                <GlitchText tag='h3' text='PROJECTS'></GlitchText>
+
             </div>
             {/* could create header-container as a component */}
     </div>
@@ -139,11 +143,16 @@ function ProjectDetail({ project }) {
       
       {/* Paragraphs describing the the project */}
       <div className="paragraphs-wrapper">
-        <h2>OVERVIEW</h2>
+        {/* <h2>OVERVIEW</h2> */}
+        <GlitchText tag='h2' text='OVERVIEW'></GlitchText>
         <p>{project.overview}</p>
-        <h2>MY ROLE</h2>
+        {/* <h2>MY ROLE</h2> */}
+        <GlitchText tag='h2' text='MY ROLE'></GlitchText>
+
         <p>{project.myRole}</p>
-        <h2>TOOLS USED</h2>
+        {/* <h2>TOOLS USED</h2> */}
+        <GlitchText tag='h2' text='TOOLS USED'></GlitchText>
+
         <p>{project.tools}</p>
       </div>
 
