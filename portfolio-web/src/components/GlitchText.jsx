@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const GlitchText = ({ tag, text }) => {
+const GlitchText = ({ tag, text, textAlign }) => {
   const [glitching, setGlitching] = useState(false);
 
   useEffect(() => {
@@ -9,7 +9,7 @@ const GlitchText = ({ tag, text }) => {
       setTimeout(() => {
         setGlitching(false);
       }, 300);
-    }, 8000); // Glitch every 5 seconds
+    }, 8000); // Glitch every 8 seconds
 
     return () => {
       clearInterval(glitchInterval);
@@ -19,7 +19,7 @@ const GlitchText = ({ tag, text }) => {
   const Tag = tag || 'span';
 
   return (
-    <Tag className={`glitch ${glitching ? 'glitching' : ''}`}>{text}</Tag>
+    <Tag className={`glitch ${glitching ? 'glitching' : ''} ${textAlign}`}>{text}</Tag>
   );
 };
 

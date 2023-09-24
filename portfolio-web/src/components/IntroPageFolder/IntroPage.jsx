@@ -8,10 +8,11 @@ const IntroPage = () => {
   return (
     <div>
         <div className='header-container'>
-            {/* <div className='header-wrapper'>
-                <img src="/IntroHeader.png" alt="Intro" />
-            </div> */}
-            <GlitchText tag='h3' text='INTRO'></GlitchText>
+            <div className='header-wrapper'>
+                {/* <img src="/IntroHeader.png" alt="Intro" /> */}
+                <GlitchText tag='h3' text='INTRO'></GlitchText>
+            </div>
+
         </div>
         <div className="intro-body-container">
             <div className='about-me-container'>

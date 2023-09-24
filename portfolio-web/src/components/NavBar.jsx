@@ -1,10 +1,11 @@
 import React from 'react';
+import GlitchText from './GlitchText';
 import { Link as ScrollLink } from 'react-scroll';
 
 const NavBar = () => {
   return (
     <nav>
-            <h1>MENU</h1>
+            <GlitchText tag='h3'text='MENU' textAlign='left'></GlitchText>
         <p>
           <ScrollLink to="home" smooth={true} duration={1000}>
             Home

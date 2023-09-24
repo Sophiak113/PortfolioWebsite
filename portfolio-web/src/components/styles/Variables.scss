@@ -3,6 +3,7 @@ $pink:#F29CED;
 $fuchsia: #FF037A;
 $purple:#3B1B72;
 $neonPurple: #692FFF;
+$neonMagenta: #A52AFF;
 $navy: #11025C;
 $darkerNavy: #050021;
 $turquoise: #14FC9D;
@@ -19,9 +20,10 @@ box-shadow: 5px 5px 5px purple;
 };
 
 
+
 h2{
  text-align: center;
-
+font-size: 2rem;
  font-family: 'Bungee Inline', cursive;
  font-family: 'Bungee Shade', cursive;
  font-family: 'Orbit', cursive;
@@ -72,8 +74,6 @@ font-family: 'Squada One', cursive;
 font-family: 'Stalinist One', cursive;
 font-family: 'Tektur', cursive;
 font-family: 'VT323', monospace;
-font-family: 'Zen Tokyo Zoo', cursive;
-font-family: 'Zilla Slab Highlight', serif;
 
 }
 
@@ -82,70 +82,37 @@ h3{
   font-size: 8vh;
   text-align: center;
   font-weight: 700;
-  letter-spacing: 1vw;
+  letter-spacing: 1rem;
   margin: 3vh 0 0 0;
+  text-wrap: wrap;
+  flex-grow: 1;
 
   // Deciding which fonts look best
-  font-family: 'Bagel Fat One', cursive;
-  font-family: 'Bungee Inline', cursive;
-  font-family: 'Bungee Shade', cursive;
-  font-family: 'Miriam Libre', sans-serif;
-  font-family: 'Monomaniac One', sans-serif;
-  font-family: 'Montserrat Subrayada', sans-serif;
-  font-family: 'Nova Mono', monospace;
-  font-family: 'Odibee Sans', cursive;
+  // font-family: 'Bagel Fat One', cursive;
+  // font-family: 'Bungee Inline', cursive;
+  // font-family: 'Bungee Shade', cursive;
+  // font-family: 'Monomaniac One', sans-serif;
+  // font-family: 'Montserrat Subrayada', sans-serif;
+  // font-family: 'Nova Mono', monospace;
+  // font-family: 'Odibee Sans', cursive; //Best one so far
   font-family: 'Silkscreen';
-  font-family: 'Sofia Sans Condensed', sans-serif;
+  // font-family: 'Sofia Sans Condensed', sans-serif;
   //  font-weight: 1000;
   //  font-style: italic;
-  font-family: 'Tomorrow';
+  // font-family: 'Tomorrow';
   // font-style: italic;
   // font-weight: 1000;
-  font-family: 'Turret Road' ;
+  // font-family: 'Turret Road' ;
   // font-weight: 800;
-  font-family: 'Atomic Age', cursive;
-  font-family: 'Bruno Ace', cursive;
-  font-family: 'Bruno Ace SC', cursive;
-  font-family: 'Bungee Hairline', cursive;
-  font-family: 'Bungee Outline', cursive;
-  font-family: 'Climate Crisis', cursive;
-  font-family: 'Dhurjati', sans-serif;
-  font-family: 'Gajraj One', cursive;
-  font-family: 'Geo', sans-serif;
-  font-family: 'Handjet', cursive;
-  // font-weight: 1000;
-font-family: 'Hubballi', sans-serif;
-font-family: 'IBM Plex Sans JP', sans-serif;
-font-family: 'Iceberg', cursive;
-font-family: 'Kdam Thmor Pro', sans-serif;
-font-family: 'Keania One', cursive;
-font-family: 'Martian Mono', monospace;
-font-family: 'Monofett', monospace;
-font-family: 'Nova Flat', cursive;
-font-family: 'Nova Slim', cursive;
-font-family: 'Offside', cursive;
-font-family: 'Orbitron', sans-serif;
-font-family: 'Oxanium', cursive;
-font-family: 'Quantico', sans-serif;
-font-family: 'Racing Sans One', cursive;
-font-family: 'Rationale', sans-serif;
-font-family: 'Rubik 80s Fade', cursive;
-font-family: 'Rubik Glitch', cursive;
-font-family: 'Rubik Iso', cursive;
-font-family: 'Rubik Maze', cursive;
-font-family: 'Rubik Vinyl', cursive;
-font-family: 'Sirin Stencil', cursive;
-font-family: 'Smooch Sans', sans-serif;
-font-family: 'Space Grotesk', sans-serif;
-font-family: 'Space Mono', monospace;
-font-family: 'Squada One', cursive;
-
-
-font-family: 'Stalinist One', cursive;
-font-family: 'Tektur', cursive;
-font-family: 'VT323', monospace;
-font-family: 'Zen Tokyo Zoo', cursive;
-font-family: 'Zilla Slab Highlight', serif;
+  // font-family: 'Gajraj One', cursive;
+// font-family: 'Kdam Thmor Pro', sans-serif;
+// font-family: 'Martian Mono', monospace;
+// font-family: 'Nova Flat', cursive;
+// font-family: 'Oxanium', cursive;
+// font-family: 'Rubik 80s Fade', cursive;
+// font-family: 'Rubik Glitch', cursive;
+// font-family: 'Squada One', cursive;
+font-size: 3.5rem;
 
 
 }
@@ -194,7 +161,7 @@ font-family: 'Tektur', cursive;
 font-family: 'Text Me One', sans-serif;
 font-family: 'VT323', monospace;
 // font-size: 30px;
-font-family: 'Zilla Slab Highlight', serif;
+// font-family: 'Zilla Slab Highlight', serif;
 
 
 
@@ -203,7 +170,7 @@ font-family: 'Zilla Slab Highlight', serif;
 // For creating a glitch effect
 .glitch{
   // Defining inital state of all glitch text
-  text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $turquoise;
+  text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $neonPurple;
 }
 .glitching{
   // Apply glitch efffect
@@ -222,3 +189,10 @@ font-family: 'Zilla Slab Highlight', serif;
 
 }
 
+// Classes for positioning Glitch text
+.left{
+  text-align: left;
+}
+.centre{
+  text-align: center;
+}
