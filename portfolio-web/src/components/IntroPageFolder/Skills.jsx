@@ -1,5 +1,5 @@
 import React from 'react';
-import {useState} from 'react';
+import {useState, useRef, useEffect} from 'react';
 // rating is out of 5
 //Expertise goes Novice/beginner, Intermediate, Advanced, Expert/Master
 const skills = [{
@@ -7,7 +7,7 @@ const skills = [{
     name: 'Javascript',
     src:'/Logos/JavascriptLogo.png',
     alt: 'Javascript',
-    rating: '2',
+    rating: 60,
     link: 'https://www.javascript.com/'
 },
 {
@@ -15,7 +15,7 @@ const skills = [{
     name: 'HTML',
     src:'/Logos/HTMLLogo.png',
     alt: 'HTML',
-    rating: '3',
+    rating: 60,
     link: 'https://html.spec.whatwg.org/'
 },
 {
@@ -23,7 +23,7 @@ const skills = [{
   name: 'CSS',
   src:'/Logos/CSSLogo.png',
   alt: 'CSS',
-  rating: '3',
+  rating: 80,
   link: 'https://www.w3.org/Style/CSS/current-work'
 },
 {
@@ -31,7 +31,7 @@ const skills = [{
   name: 'Sass',
   src:'/Logos/SassLogo.png',
   alt: 'Syntactically Awesome Style Sheets',
-  rating: '1',
+  rating: 40,
   link: 'https://sass-lang.com/'
 },
 {
@@ -39,7 +39,7 @@ const skills = [{
   name: 'Python',
   src:'/Logos/PythonLogo.png',
   alt: 'Python',
-  rating: '2',
+  rating: 50,
   link: 'https://www.python.org/'
 },
 {
@@ -47,7 +47,7 @@ const skills = [{
   name: 'Pygame',
   src:'/Logos/PygameLogo.png',
   alt: 'Pygame',
-  rating: '1',
+  rating: 30,
   link: 'https://www.pygame.org/news'
 },
 {
@@ -55,7 +55,7 @@ const skills = [{
   name: 'Node JS',
   src:'/Logos/NodeLogo.png',
   alt: 'Node',
-  rating: '1',
+  rating: 30,
   link: 'https://nodejs.org/'
 },
 {
@@ -63,7 +63,7 @@ const skills = [{
   name: 'Express JS',
   src:'/Logos/ExpressLogo.png',
   alt: 'Express JS',
-  rating: '1',
+  rating: 20,
   link: 'https://expressjs.com/'
 },
 {
@@ -71,7 +71,7 @@ const skills = [{
   name: 'React JS',
   src:'/Logos/ReactLogo.png',
   alt: 'React JS',
-  rating: '2',
+  rating: 60,
   link: 'https://reactjs.org/'
 },
 
@@ -79,49 +79,38 @@ const skills = [{
 ]
 
 const Skills = (props) => {
-  const [showSkill, setShowSkill] = useState(false);
-  const [selectedSkillId, setSelectedSkillId] = useState(null);
-  
+  const [expandedSkills, setExpandedSkills] = useState([]);
+
+
   const handleClick = (skillId) => {
-    setSelectedSkillId(skillId);
-    setShowSkill(true);
+    // Check if the skillId is already in the expandedSkills array
+    if (expandedSkills.includes(skillId)) {
+      // If it's already expanded, remove it from the array
+      setExpandedSkills(expandedSkills.filter((id) => id !== skillId));
+    } else {
+      // If it's not expanded, add it to the array
+      setExpandedSkills([...expandedSkills, skillId]);
+    }
   };
+
   return (
     <div className='skills-icon-container'>
-        {skills.map((skill)=>(
-          <div className="icon-container" key={skill.id}>
-            <div className="icon-labels-container">
-              <p>{skill.name}</p>
-              {/* Displays my skill level in each skill based on my rating */}
-              {(() => {
-                if (skill.rating === '1') {
-                  return <p>Beginner</p>;
-                } else if (skill.rating === '2' || skill.rating === '3') {
-                  return <p>Intermediate</p>;
-                } else if (skill.rating === '4') {
-                  return <p>Advanced</p>;
-                } else if (skill.rating === '5') {
-                  return <p>Expert</p>;
-                } else {
-                  // Handle other cases or provide a default value
-                  return <h2>Unknown</h2>;
-                }
-              })()}
-            </div>
-            <div className={`skill-outline ${showSkill ? 'expanded': ''}`}
-            onClick={() => handleClick(skill.id)}
-            //Need to use a function callback else will cause an infinte loop
-            >
-                <img src={skill.src} alt={skill.alt} />
-                {selectedSkillId && <ExpandedSkill skill={skills.find((s) => s.id === selectedSkillId)} />}
+      {skills.map((skill) => (
+        <div
+          className={`icon-container ${expandedSkills.includes(skill.id) ? 'selectedSkill' : ''}`}
+          onClick={() => handleClick(skill.id)}  //Need to use a function callback else will cause an infinte loop
 
-            </div>
+          key={skill.id}
+        >
+          <div className={`skill-outline ${expandedSkills.includes(skill.id) ? 'expanded' : ''}`}>
+            <img src={skill.src} alt={skill.alt} />
+            {expandedSkills.includes(skill.id) && <ExpandedSkill skill={skill} />}
           </div>
-        ))}
-      
+        </div>
+      ))}
     </div>
-  )
-}
+  );
+};
 
 function ExpandedSkill({skill}){
   if (!skill) {
@@ -130,10 +119,15 @@ function ExpandedSkill({skill}){
   }
   return(
       <div className="skill-percentage-container">
-        <div className="skill-percentage">
+        <div className="skill-percentage"
+        style={{width:`${skill.rating}%`}}>
           <div className="skill-info">
-            <p>{skill.name}</p>
-            <p>{skill.rating}</p>
+          <div className="icon-labels-container">
+              <p>{skill.name}</p>
+              <p>{skill.rating}%</p>
+
+            </div>
+
           </div>
         </div>
 

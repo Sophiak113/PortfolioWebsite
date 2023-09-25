@@ -96,6 +96,7 @@ const ProjectsPage = () => {
 
     <div className="project-and-detail-container">
       <div className='projects-list-container'   ref={projectsListRef} >
+      {/* The above needs a ref so its style can be changed in the UseEffect */}
 
                 <ProjectsList
             showDetail={showDetail}
