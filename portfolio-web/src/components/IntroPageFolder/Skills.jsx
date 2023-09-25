@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import {useState} from 'react';
 // rating is out of 5
 //Expertise goes Novice/beginner, Intermediate, Advanced, Expert/Master
 const skills = [{
@@ -78,10 +79,17 @@ const skills = [{
 ]
 
 const Skills = (props) => {
+  const [showSkill, setShowSkill] = useState(false);
+  const [selectedSkillId, setSelectedSkillId] = useState(null);
+  
+  const handleClick = (skillId) => {
+    setSelectedSkillId(skillId);
+    setShowSkill(true);
+  };
   return (
     <div className='skills-icon-container'>
         {skills.map((skill)=>(
-          <div className="icon-container">
+          <div className="icon-container" key={skill.id}>
             <div className="icon-labels-container">
               <p>{skill.name}</p>
               {/* Displays my skill level in each skill based on my rating */}
@@ -100,17 +108,39 @@ const Skills = (props) => {
                 }
               })()}
             </div>
-            <div className="skill-outline">
-              <a href={skill.link} target="_blank">
+            <div className={`skill-outline ${showSkill ? 'expanded': ''}`}
+            onClick={() => handleClick(skill.id)}
+            //Need to use a function callback else will cause an infinte loop
+            >
                 <img src={skill.src} alt={skill.alt} />
-                </a>
-              
+                {selectedSkillId && <ExpandedSkill skill={skills.find((s) => s.id === selectedSkillId)} />}
+
             </div>
           </div>
         ))}
       
     </div>
   )
+}
+
+function ExpandedSkill({skill}){
+  if (!skill) {
+    // Handle the case when no project is selected
+    return null;
+  }
+  return(
+      <div className="skill-percentage-container">
+        <div className="skill-percentage">
+          <div className="skill-info">
+            <p>{skill.name}</p>
+            <p>{skill.rating}</p>
+          </div>
+        </div>
+
+      </div>
+
+
+  );
 }
 
 export default Skills

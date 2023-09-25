@@ -9,8 +9,7 @@
     // grid-template-rows: 2;
 }
 
-.intro-body-container > :nth-child(-n+2) > :nth-child(2){
-
+.about-me-body-wrapper{
     border-radius: 30px;
     padding: 15px 15px 15px 15px;
     margin: 15px 0px 0px 0px;
@@ -18,11 +17,19 @@
     box-shadow: inset 0px 0px 10px $neonPurple;
 }
 
-.about-me-body-wrapper{
-    padding: 15px 0px;
-}
-
 //Skills section CSS
+// .intro-body-container > :nth-child(-n+2) > :nth-child(2){
+
+//     border-radius: 30px;
+//     padding: 15px 15px 15px 15px;
+//     margin: 15px 0px 0px 0px;
+//     grid-column: 1;
+//     box-shadow: inset 0px 0px 10px $neonPurple;
+// }
+
+.icon-container{
+    display: flex;
+}
 .skills-icon-container{
     display: flex;
     flex-direction: row;
@@ -32,6 +39,41 @@
 .icon-labels-container>p{
     margin: 0;
     text-align: center;
+}
+
+.skill-outline{
+    width: 40%;
+    box-shadow: inset 0px 0px 10px $neonPurple;
+    border-radius: 15px;
+    padding: 10px 5px 0px 5px;
+    height: fit-content;
+}
+// Styles for after a skill icon is clicked and expanded
+.expanded{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.expanded>img{
+    width: 10vw;
+}
+.skill-percentage-container{
+    width: 100%;
+    height: 50%;
+    box-shadow: inset 0px 0px 10px $neonPurple;
+    border-radius: 15px;
+}
+.skill-percentage{
+    width: 50%;
+    height: 100%;
+    border-radius: 15px;
+    background-color: $fuchsia;
+}
+
+.skill-info>*{
+    margin: 0;
+    text-align: center;
+
 }
 
 // Qualities Section styling
