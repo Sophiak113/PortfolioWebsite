@@ -164,6 +164,7 @@ nav>p:hover a{
 .scrollable-container {
   margin: 0 7vw ; /* Adjust the margin to match the width of the fixed images */
   overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-x: hidden;
   height: 100vh; /* Set the height as needed */
   padding-top: 7vh;
   transform: translateY(-15vh);
