@@ -100,7 +100,7 @@ const Skills = (props) => {
                 }
               })()}
             </div>
-            <div className="card-outline">
+            <div className="skill-outline">
               <a href={skill.link} target="_blank">
                 <img src={skill.src} alt={skill.alt} />
                 </a>
