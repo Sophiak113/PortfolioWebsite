@@ -41,11 +41,11 @@ function App() {
         </Element>
         <Element name="contactMe">
           <ContactPage></ContactPage>
-          <Footer></Footer>
           </Element>
           </div>
           <FixedImagesBot></FixedImagesBot>
       </div>
+      <Footer></Footer>
 
         
       
