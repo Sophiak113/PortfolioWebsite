@@ -125,7 +125,7 @@ function ProjectsList({showDetail, handleClick, selectedProjectId}) {
         onClick={() => handleClick(project.id)}
         key={project.id}
         >
-          {project.name}
+          <p>{project.name}</p>
         </div>
       ))}
     </div>
@@ -164,8 +164,9 @@ function ProjectDetail({ project }) {
         </div>
         {/* Github Link in the form of a github icon */}
         <div className="detail-link-wrapper">
-          <h2>LINKS</h2>
-          <div className="card-outline">
+        <GlitchText tag='h2' text='LINKS'></GlitchText>
+
+          <div className="link-outline">
           <a href={project.link} target="_blank">
                     <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
                 </a>
