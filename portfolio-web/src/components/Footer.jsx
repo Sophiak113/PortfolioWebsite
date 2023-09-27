@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 const Footer = () => {
   return (
     <footer class="footer-container">
+      <div className="footer-transition"></div>
   <div class="footer-contact-info">
     <p>Sophia Kinsey</p>
     <a href="mailto:sophia.kinsey@btinternet.com">sophia.kinsey@btinternet.com</a>
@@ -14,7 +15,7 @@ const Footer = () => {
   </div>
   
 <div className="footer-nav">
-  <NavBar></NavBar>
+  <NavBar></NavBar> 
 </div>
   
 
