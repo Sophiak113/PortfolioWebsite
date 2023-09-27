@@ -1,32 +1,17 @@
 @import '../styles/Variables';
 
-.card-outline{
-    width: 5vw;
-    height: 5vw;
-    margin: 1vw 1vw;
-    padding: 5px;
-    border: 4px outset $purple;
-    border-radius: 15px;
-  }
-
-//Contact Image Links
-
-img{
-// shrinking images to fit inside their wrappers/parent element
-width: 100%;
-height: 100%;
-object-fit: contain;
-}
 
 
-// Contact form css
+
 //Positioning elements on the contact page
 .contact-body-container{
-margin: 10vh 10vw;
+margin: 3vh 0;
 display: flex;
-justify-content: space-around;
+flex-direction: column;
 flex-grow: 1;
 }
+
+// Contact form css
 .contact-form{
 display: flex;
 flex-direction: column;
@@ -37,21 +22,29 @@ justify-content: center;
 
 //Controls size of input boxes
 .contact-form-container{
-width: 20vw;
+width: 100%;
 height: fit-content;
 }
 
 //Making contact form look pretty
 input[type=text] {
-background-color: $purple;
-border: $purple;
+  background-color: transparent;
+  border: transparent;
+font-size: 6vw;
+box-shadow: inset 0px 0px 10px $neonPurple;
+
 }
 textarea{
-background-color: $purple;
-border: $purple;
+background-color: transparent;
+border: transparent;
 height: 20vh;
 border-radius: 25px;
 padding: 20px;
+font-size: 6vw;
+resize: vertical;
+max-height: 50vh;
+box-shadow: inset 0px 0px 10px $neonPurple;
+
 }
 
 //Making inputs and button same height and shape
@@ -61,8 +54,9 @@ border-radius: 30px;
 text-align: center;
 }
 button{
-  background-color: $fuchsia;
+  background-color: $neonMagenta;
   border: none;
+  font-size: 6vw;
 }
 //Making the placeholder white in all browsers
 //Chrome, Firefox, Opera, Safari 10.1+
@@ -79,3 +73,22 @@ color: white;
 color: white;
 }
 
+//Contact Image Links
+.links-container>div{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  place-items: center;
+}
+.links-container>div>.skill-outline{
+  width: 20vw;
+  height: 20vw;
+  padding: 5px;
+  border-radius: 15px;
+}
+
+img{
+// shrinking images to fit inside their wrappers/parent element
+width: 100%;
+height: 100%;
+object-fit: contain;
+}
