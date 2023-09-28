@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import GlitchText from '../GlitchText';
 import LinkList from './LinkList';
 import Footer from '../Footer';
 import './Contact.scss';
 
-const ContactPage = () => {
+const ContactPage = forwardRef((props, ref) => {
 const links = [{
     alt:'Github',
     src: '/Logos/GithubLogo.png',
@@ -17,7 +17,7 @@ const links = [{
 }
 ]
   return (
-    <div className='contact-container'>
+    <div className='contact-container' ref={ref}>
       <div className='header-container'>
             <div className='header-wrapper'>
                 {/* <img src="/ContactMeHeader.png" alt="Contact Me" /> */}
@@ -47,6 +47,6 @@ const links = [{
 
     </div>
   )
-}
+});
 
 export default ContactPage

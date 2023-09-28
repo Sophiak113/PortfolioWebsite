@@ -1,12 +1,12 @@
-import React from 'react';
+import React, {forwardRef} from 'react';
 import GlitchText from '../GlitchText';
 import './Intro.scss';
 import Skills from './Skills';
 
-const IntroPage = () => {
+const IntroPage = forwardRef((props, ref) => {
     const qualities = ['Resilient', 'Diligent', 'Fast Learner', 'Motivated', 'Team Player']
   return (
-    <div>
+    <div ref={ref}>
         <div className='header-container'>
             <div className='header-wrapper'>
                 {/* <img src="/IntroHeader.png" alt="Intro" /> */}
@@ -53,6 +53,6 @@ const IntroPage = () => {
         </div>
     </div>
   )
-}
+});
 
 export default IntroPage;

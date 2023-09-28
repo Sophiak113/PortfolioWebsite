@@ -1,4 +1,4 @@
-import React , {useState, useEffect, useRef} from 'react'
+import React , {useState, useEffect, useRef, forwardRef} from 'react'
 import GlitchText from '../GlitchText';
 import './Projects.scss';
 
@@ -47,7 +47,7 @@ const projects = [{
 ]
 
 
-const ProjectsPage = () => {
+const ProjectsPage = forwardRef((props, ref) => {
   const [showDetail, setShowDetail] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
@@ -84,7 +84,7 @@ const ProjectsPage = () => {
   }, [showDetail]); // This effect runs whenever showDetail changes
 
   return (
-    <div className='project-page-container'>
+    <div className='project-page-container' ref={ref}>
       <div className='header-container'>
             <div className='header-wrapper'>
                 {/* <img src="/ProjectHeader.png" alt="Projects" /> */}
@@ -113,7 +113,7 @@ const ProjectsPage = () => {
 
     </div>
   )
-};
+});
 
 //Using a mapping function to display each project and give them the same functions
 function ProjectsList({showDetail, handleClick, selectedProjectId}) {
