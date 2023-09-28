@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const GlitchText = ({ tag, text, textAlign }) => {
+const GlitchText = ({ tag, text, textAlign, id}) => {
   const [glitching, setGlitching] = useState(false);
 
   useEffect(() => {
@@ -19,7 +19,7 @@ const GlitchText = ({ tag, text, textAlign }) => {
   const Tag = tag || 'span';
 
   return (
-    <Tag className={`glitch ${glitching ? 'glitching' : ''} ${textAlign}`}>{text}</Tag>
+    <Tag className={`glitch ${glitching ? 'glitching' : ''} ${textAlign}`} id={id}>{text}</Tag>
   );
 };
 

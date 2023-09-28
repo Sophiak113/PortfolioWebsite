@@ -5,7 +5,7 @@ import { Link as ScrollLink } from 'react-scroll';
 const NavBar = () => {
   return (
     <nav>
-            <GlitchText tag='h3'text='MENU' textAlign='left'></GlitchText>
+            <GlitchText tag='h2'text='MENU' textAlign='center'></GlitchText>
         <p>
           <ScrollLink to="home" smooth={true} duration={1000}>
             Home
