@@ -29,6 +29,8 @@ const IntroPage = forwardRef((props, ref) => {
                 <div className="skills-header-wrapper">
                     {/* <h2>SKILLS</h2> */}
                     <GlitchText tag='h2' text='SKILLS'></GlitchText>
+                    <GlitchText tag='h2' text='Click Below!'></GlitchText>
+
 
                 </div>
                 <div className='skills-body-wrapper'>

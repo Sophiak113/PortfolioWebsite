@@ -90,9 +90,11 @@ const ProjectsPage = forwardRef((props, ref) => {
                 {/* <img src="/ProjectHeader.png" alt="Projects" /> */}
                 <GlitchText tag='h3' text='PROJECTS'></GlitchText>
 
+
             </div>
             {/* could create header-container as a component */}
     </div>
+    <GlitchText tag='h2' text='Click Below!'></GlitchText>
 
     <div className="project-and-detail-container">
       <div className='projects-list-container'   ref={projectsListRef} >
@@ -167,7 +169,7 @@ function ProjectDetail({ project }) {
         <GlitchText tag='h2' text='LINKS'></GlitchText>
 
           <div className="skill-outline">
-          <a href={project.link} target="_blank">
+          <a href={project.link}>
                     <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
                 </a>
           </div>

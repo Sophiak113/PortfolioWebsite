@@ -80,7 +80,7 @@ function App() {
       <Footer></Footer>
 
         
-      <div className="scroll-links">
+      {/* <div className="scroll-links">
       <button ref={homeButtonRef} onClick={() => scrollToSection(homeContainerRef)}>
           Scroll to Home
         </button>
@@ -93,7 +93,7 @@ function App() {
         <button onClick={() => scrollToSection(contactSectionRef)}>
           Scroll to Contact
         </button>
-      </div>
+      </div> */}
 
       
 

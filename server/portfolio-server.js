@@ -36,7 +36,7 @@ app.post('/send-email', (req, res) => {
     from: '',
     to: email, // Recipient's email address
     subject: 'Contact Form Submission',
-    text: `Name: ${name}\nMessage: ${message}`,
+    text: `Name: ${name}\nEmail: ${email}Subject: ${subject}\nMessage: ${message}`,
   };
 
   // Send the email
