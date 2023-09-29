@@ -1,5 +1,6 @@
 import React, {forwardRef} from 'react';
 import GlitchText from '../GlitchText';
+import ContactForm from './ContactForm';
 import LinkList from './LinkList';
 import Footer from '../Footer';
 import './Contact.scss';
@@ -29,13 +30,7 @@ const links = [{
           {/* <h2>Send me an email</h2> */}
           <GlitchText tag='h2' text='SEND ME AN EMAIL'></GlitchText>
 
-          <form className='contact-form' action="">
-            <input type="text" placeholder='Email' />
-            <input type="text" name="" placeholder='Name' />
-            <input type="text" placeholder='Subject'/>
-            <textarea name="longInput" id="" cols="30" rows="10" placeholder='Message'></textarea>
-            <button>Send</button>
-          </form>
+          <ContactForm></ContactForm>
         </div>
         <div className="links-container">
           {/* <h2>Links</h2> */}
