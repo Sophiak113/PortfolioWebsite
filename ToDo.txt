@@ -19,7 +19,8 @@ Priority 3
 -Create CardLinksIcons as a core component as I have used card-outline in projects github link and skills icons
 -Do I need a contact form now that I know mailto: exists
 -Add filters for my projects so they're ordered by dates or something
-
+-Make a custom scrollbar from scratch using js,html and css
+-Make the glitch text so that the font changes every glitch as well
 
 
 

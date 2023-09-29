@@ -1,51 +1,57 @@
-//Sass variables
-$pink:#F29CED;
-$fuchsia: #FF037A;
-$purple:#3B1B72;
-$standardFontSize:calc(1vw + 3px);
-$h2FontSize:50px;
+// //Sass variables
+// $pink:#F29CED;
+// $fuchsia: #FF037A;
+// $purple:#3B1B72;
+// $standardFontSize:calc(1vw + 3px);
+// $h2FontSize:50px;
 
-@mixin default-list-shape{
-    height: 5vh;
-border-radius: 30px;
-text-align: center;
-background-color: $purple;
-border: $purple;
-}
-
+// @mixin default-list-shape{
+//     height: 5vh;
+// border-radius: 30px;
+// text-align: center;
+// background-color: $purple;
+// border: $purple;
+// }
+@import '../styles/Variables';
 .project-page-container{
-    overflow: visible;
+    width: 100%;
 }
 
 //Grid containing the list and the hidden detail that appears after a list is clicked
 .project-and-detail-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: 1;
-    padding: 5vh 6vw;
+    display: flex;
+    // grid-template-columns: repeat(3,1fr);
+    // grid-template-rows: 1;
+    // padding: 5vh 6vw;
+    flex-direction: column;
+    width: 100%;
+    overflow: hidden;
 }
 
 //CSS for the detail container (more info about the projects)
 .detail-container{
     height: fit-content;
-    grid-column: span 2;
-    width: 60vw;
-    background-color: #3B1B72;
+    // grid-column: span 2;
+    width: 100%;
+    box-shadow: inset 0px 0px 10px $neonPurple;
     border-radius: 30px;
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    // grid-template-columns: 2fr 1fr;
+    margin-top: 15px;
     padding: 15px;
-    grid-row: 1;
+    // grid-row: 1;
+    box-sizing: border-box;
+    text-align: center
 }
 
 
 .project-wrapper{
   @include default-list-shape();
-  line-height: 5vh;
-  width: 25vw;
-  margin: 7px 0px;
-//   This Line height is to vertically center the text
+  height: fit-content;
+  text-wrap: nowrap;
+  padding: 0 15px;
+
 
 }
 
@@ -53,27 +59,37 @@ border: $purple;
 .projects-body-wrapper{
     display: flex;
     justify-content: center;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
 }
 
 .projects-list-container{
     display: flex;
     justify-content: center;
-    grid-column: 2;
-    grid-row: 1;
+    flex-direction: row;
+    flex-grow: wrap;
+    // grid-column: 2;
+    // grid-row: 1;
 }
 
 
-//overview, my role and tools used positioning css
-.paragraphs-wrapper{
-    grid-column: 1;
-    margin-right: 20px;
-
+// Links section styling
+.links-container{
+    margin-bottom: 15vh;
 }
-
+.detail-link-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 //Shaping and position detail image
 .detail-img{
     border-radius: 30px;
+    box-shadow: -5px 0 0 $darkerNavy, 3px 3px 0  $neonPurple;
 
+}
+.detail-link-wrapper>.skill-outline{
+    width: 20vw;
 }
 

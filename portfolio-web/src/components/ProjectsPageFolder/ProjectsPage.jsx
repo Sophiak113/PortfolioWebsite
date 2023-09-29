@@ -1,6 +1,8 @@
-import React , {useState, useEffect, useRef} from 'react'
+import React , {useState, useEffect, useRef, forwardRef} from 'react'
+import GlitchText from '../GlitchText';
 import './Projects.scss';
 
+// Array containing project objects - info about projects I have done
 const projects = [{
   id: '0',
   name: 'Recipe Manager',
@@ -45,7 +47,7 @@ const projects = [{
 ]
 
 
-const ProjectsPage = () => {
+const ProjectsPage = forwardRef((props, ref) => {
   const [showDetail, setShowDetail] = useState(false);
   const [selectedProjectId, setSelectedProjectId] = useState(null);
   const [isMobileViewport, setIsMobileViewport] = useState(false);
@@ -82,16 +84,19 @@ const ProjectsPage = () => {
   }, [showDetail]); // This effect runs whenever showDetail changes
 
   return (
-    <div className='project-page-container'>
+    <div className='project-page-container' ref={ref}>
       <div className='header-container'>
             <div className='header-wrapper'>
-                <img src="/ProjectHeader.png" alt="Projects" />
+                {/* <img src="/ProjectHeader.png" alt="Projects" /> */}
+                <GlitchText tag='h3' text='PROJECTS'></GlitchText>
+
             </div>
             {/* could create header-container as a component */}
     </div>
 
     <div className="project-and-detail-container">
       <div className='projects-list-container'   ref={projectsListRef} >
+      {/* The above needs a ref so its style can be changed in the UseEffect */}
 
                 <ProjectsList
             showDetail={showDetail}
@@ -108,7 +113,7 @@ const ProjectsPage = () => {
 
     </div>
   )
-};
+});
 
 //Using a mapping function to display each project and give them the same functions
 function ProjectsList({showDetail, handleClick, selectedProjectId}) {
@@ -120,7 +125,7 @@ function ProjectsList({showDetail, handleClick, selectedProjectId}) {
         onClick={() => handleClick(project.id)}
         key={project.id}
         >
-          {project.name}
+          <p>{project.name}</p>
         </div>
       ))}
     </div>
@@ -139,11 +144,16 @@ function ProjectDetail({ project }) {
       
       {/* Paragraphs describing the the project */}
       <div className="paragraphs-wrapper">
-        <h2>OVERVIEW</h2>
+        {/* <h2>OVERVIEW</h2> */}
+        <GlitchText tag='h2' text='OVERVIEW'></GlitchText>
         <p>{project.overview}</p>
-        <h2>MY ROLE</h2>
+        {/* <h2>MY ROLE</h2> */}
+        <GlitchText tag='h2' text='MY ROLE'></GlitchText>
+
         <p>{project.myRole}</p>
-        <h2>TOOLS USED</h2>
+        {/* <h2>TOOLS USED</h2> */}
+        <GlitchText tag='h2' text='TOOLS USED'></GlitchText>
+
         <p>{project.tools}</p>
       </div>
 
@@ -154,8 +164,9 @@ function ProjectDetail({ project }) {
         </div>
         {/* Github Link in the form of a github icon */}
         <div className="detail-link-wrapper">
-          <h2>LINKS</h2>
-          <div className="card-outline">
+        <GlitchText tag='h2' text='LINKS'></GlitchText>
+
+          <div className="skill-outline">
           <a href={project.link} target="_blank">
                     <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
                 </a>

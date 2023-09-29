@@ -1,0 +1,197 @@
+//Sass variables
+$pink:#F29CED;
+$fuchsia: #FF037A;
+$purple:#3B1B72;
+$neonPurple: #692FFF;
+$neonMagenta: #A52AFF;
+$navy: #11025C;
+$darkerNavy: #050021;
+$turquoise: #14FC9D;
+$standardFontSize:calc(1vw + 3px);
+$h2FontSize:50px;
+
+@mixin default-list-shape{
+  height: 5vh;
+border-radius: 30px;
+text-align: center;
+border: $purple;
+box-shadow: inset 0px 0px 10px $neonPurple;
+
+};
+
+
+
+h2{
+ text-align: center;
+font-size: 2rem;
+ font-family: 'Bungee Inline', cursive;
+ font-family: 'Bungee Shade', cursive;
+ font-family: 'Orbit', cursive;
+ font-family: 'Oxygen Mono';
+ font-family: 'Silkscreen';
+ font-family: 'Sofia Sans Condensed', sans-serif;
+//  font-weight: 1000;
+//  font-style: italic;
+font-family: 'Tomorrow';
+// font-style: italic;
+// font-weight:1000;
+font-family: 'Bruno Ace', cursive;
+font-family: 'Bruno Ace SC', cursive;
+font-family: 'Dhurjati', sans-serif;
+// font-size: 40px;
+font-family: 'Gajraj One', cursive;
+// letter-spacing: 2px;
+font-family: 'Geo', sans-serif;
+// font-style: italic;
+// font-size: 35px;
+font-family: 'Handjet', cursive;
+// font-size: 40px;
+font-family: 'IBM Plex Sans JP', sans-serif;
+font-family: 'Iceberg', cursive;
+font-family: 'Kdam Thmor Pro', sans-serif;
+font-family: 'Keania One', cursive;
+font-family: 'Lexend Tera', sans-serif;
+font-family: 'Martian Mono', monospace;
+font-family: 'Nova Flat', cursive;
+font-family: 'Nova Slim', cursive;
+font-family: 'Offside', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Oxanium', cursive;
+font-family: 'Quantico', sans-serif;
+font-family: 'Racing Sans One', cursive;
+font-family: 'Rationale', sans-serif;
+font-family: 'Rubik 80s Fade', cursive;
+font-family: 'Rubik Glitch', cursive;
+font-family: 'Rubik Iso', cursive;
+font-family: 'Rubik Maze', cursive;
+font-family: 'Rubik Vinyl', cursive;
+font-family: 'Sirin Stencil', cursive;
+font-family: 'Smooch Sans', sans-serif;
+font-family: 'Space Grotesk', sans-serif;
+font-family: 'Space Mono', monospace;
+font-family: 'Squada One', cursive;
+
+font-family: 'Stalinist One', cursive;
+font-family: 'Tektur', cursive;
+font-family: 'VT323', monospace;
+
+}
+
+h3{
+  color: white;
+  text-align: center;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin: 3vh 0 0 0;
+  text-wrap: wrap;
+  font-size: 12vw;
+  // Deciding which fonts look best
+  // font-family: 'Bagel Fat One', cursive;
+  // font-family: 'Bungee Inline', cursive;
+  // font-family: 'Bungee Shade', cursive;
+  // font-family: 'Monomaniac One', sans-serif;
+  // font-family: 'Montserrat Subrayada', sans-serif;
+  // font-family: 'Nova Mono', monospace;
+  // font-family: 'Odibee Sans', cursive; //Best one so far
+  font-family: 'Silkscreen';
+  // font-family: 'Sofia Sans Condensed', sans-serif;
+  //  font-weight: 1000;
+  //  font-style: italic;
+  // font-family: 'Tomorrow';
+  // font-style: italic;
+  // font-weight: 1000;
+  // font-family: 'Turret Road' ;
+  // font-weight: 800;
+  // font-family: 'Gajraj One', cursive;
+// font-family: 'Kdam Thmor Pro', sans-serif;
+// font-family: 'Martian Mono', monospace;
+// font-family: 'Nova Flat', cursive;
+// font-family: 'Oxanium', cursive;
+// font-family: 'Rubik 80s Fade', cursive;
+// font-family: 'Rubik Glitch', cursive;
+// font-family: 'Squada One', cursive;
+
+
+
+}
+
+p{
+  font-size: 6vw;
+  font-family: 'Bungee Inline', cursive;
+  font-family: 'Kodchasan', sans-serif;
+  font-family: 'Miriam Libre', sans-serif;
+  font-family: 'Monomaniac One', sans-serif;
+  font-family: 'Nova Mono', monospace;
+  font-family: 'Orbit', cursive;
+  font-family: 'Oxygen Mono';
+  font-family: 'Silkscreen';
+  font-family: 'Tomorrow';
+  // font-style: italic;
+  // font-weight: 100;
+  font-family: 'Turret Road' ;
+  // letter-spacing: 1px;
+  // font-weight: 200;
+  font-family: 'Wallpoet';
+  font-family: 'Bruno Ace', cursive;
+  font-family: 'Comfortaa', cursive;
+  font-family: 'Cute Font', cursive;
+  // font-size: 35PX;
+  font-family: 'Geo', sans-serif;
+// font-size: 20px;
+font-family: 'Handjet', cursive;
+// font-size: 20px;
+font-family: 'Hubballi', sans-serif;
+font-family: 'Iceberg', cursive;
+font-family: 'Kdam Thmor Pro', sans-serif;
+font-family: 'Lexend Tera', sans-serif;
+font-family: 'Martian Mono', monospace;
+font-family: 'Mohave', sans-serif;
+font-family: 'Nova Flat', cursive;
+font-family: 'Nova Slim', cursive;
+font-family: 'Offside', cursive;
+font-family: 'Orbitron', sans-serif;
+font-family: 'Quantico', sans-serif;
+font-family: 'Rationale', sans-serif;
+font-family: 'Rubik Maze', cursive;
+font-family: 'Space Grotesk', sans-serif;
+font-family: 'Space Mono', monospace;
+font-family: 'Syne Mono', monospace;
+font-family: 'Tektur', cursive;
+font-family: 'Text Me One', sans-serif;
+font-family: 'VT323', monospace;
+// font-size: 30px;
+// font-family: 'Zilla Slab Highlight', serif;
+
+
+
+}
+
+// For creating a glitch effect
+.glitch{
+  // Defining inital state of all glitch text
+  text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $neonPurple;
+}
+.glitching{
+  // Apply glitch efffect
+  animation: glitch 50ms steps(5) infinite;
+}
+
+@keyframes glitch {
+  0%{
+    text-shadow: -5px 0 0 $darkerNavy, 5px 0px 0  $turquoise;
+
+  }
+  40%, 60%{
+    text-shadow: -5px 0 0 $fuchsia, 5px 0px 0  $turquoise;
+    transform: skewX(5deg);
+  }
+
+}
+
+// Classes for positioning Glitch text
+.left{
+  text-align: left;
+}
+.centre{
+  text-align: center;
+}

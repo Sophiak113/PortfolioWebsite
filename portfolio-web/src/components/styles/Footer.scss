@@ -1,0 +1,48 @@
+@import 'Variables';
+
+//Styling Footer
+footer{
+    display: flex;
+    background-color: rgba(0, 0, 0, 0.207);
+    scroll-snap-align: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0vh 0 10vh 0;
+    gap: 5vh;
+  }
+  .footer-transition{
+    height: 20vh;
+    $base-color: $navy;
+      $gradient-stops: ();
+      $stop-count: 20;
+    
+      @for $i from 0 through $stop-count {
+        $opacity: ($i * 0.1);
+        $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
+      }
+    
+    background: linear-gradient(to top, $gradient-stops);
+  }
+  footer p {
+    margin: 1vw 1vw;
+  }
+  .footer-contact-info>a{
+    font-size: 6vw;
+  
+  }
+  // .footer-container>*>*{
+  //   margin: 0px;
+  // }
+  // .footer-copyright>p{
+  //   margin: 0;
+  // }
+  // .footer-nav>nav>*{
+  //   margin: 0;
+  // }
+  
+  .footer-nav>nav>h2{
+    display: none;
+    margin: 0;
+  }
+  
+  
