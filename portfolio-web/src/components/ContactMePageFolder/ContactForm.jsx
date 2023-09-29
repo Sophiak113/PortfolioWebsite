@@ -11,6 +11,7 @@ const ContactForm = () => {
       });
   
     const [errors, setErrors] = useState({}); // State to store validation errors
+    const [sentEmail, setSentEmail] = useState(false)
   
           //Stores information submitted from form as an object
       const handleChange = (e) => {
@@ -43,7 +44,7 @@ const ContactForm = () => {
         return Object.keys(newErrors).length === 0;
     
       };
-      
+
       const handleSubmit = async (e) => {
           e.preventDefault();
   
@@ -61,7 +62,7 @@ const ContactForm = () => {
           });
     
           if (response.ok) {
-            console.log('Email sent successfully');
+            alert('Email sent successfully');
             // Reset the form or show a success message
           } else {
             console.error('Failed to send email');
@@ -96,6 +97,7 @@ const ContactForm = () => {
             {errors.message && <div className="error">{errors.message}</div> }
 
             <button type='submit'>Send</button>
+
     </form>
   )
 }

@@ -169,7 +169,7 @@ function ProjectDetail({ project }) {
         <GlitchText tag='h2' text='LINKS'></GlitchText>
 
           <div className="skill-outline">
-          <a href={project.link} target="_blank">
+          <a href={project.link}>
                     <img src='/Logos/GithubLogo.png' alt='Link to Github Repo' />
                 </a>
           </div>
