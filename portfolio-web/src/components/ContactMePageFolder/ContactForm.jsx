@@ -65,7 +65,7 @@ const ContactForm = () => {
             alert('Email sent successfully');
             // Reset the form or show a success message
           } else {
-            console.error('Failed to send email');
+            alert('Failed to send email');
             // Handle the error, show an error message, etc.
           }
         } catch (error) {
