@@ -15,7 +15,7 @@ const Footer = () => {
   </div>
   
 <div className="footer-nav">
-  <NavBar></NavBar> 
+  {/* <NavBar></NavBar>  */}
 </div>
   
 

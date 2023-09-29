@@ -16,7 +16,10 @@ const HomePage = () => {
 
       </div>
       <div className="header-nav">
-        <NavBar></NavBar>
+        {/* <NavBar></NavBar> */}
+        <GlitchText tag='h2' text='Scroll'></GlitchText>
+        <GlitchText tag='h2' text='↓'></GlitchText>
+
       </div>
 
       </div>

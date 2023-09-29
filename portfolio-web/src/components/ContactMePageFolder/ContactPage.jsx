@@ -41,9 +41,11 @@ const links = [{
           {/* <h2>Links</h2> */}
           <GlitchText tag='h2' text='LINKS'></GlitchText>
           <LinkList links={links} />
+          <GlitchText tag='h2' text='Scroll'></GlitchText>
+        <GlitchText tag='h2' text='↓'></GlitchText>
         </div>
       </div>
-      
+
 
     </div>
   )
