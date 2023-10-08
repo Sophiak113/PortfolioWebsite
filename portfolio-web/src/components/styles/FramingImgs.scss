@@ -1,4 +1,17 @@
 @import 'Variables';
+//CSS for decorative container that you see whenever you go to /info/...
+.decorative-container{
+  scroll-snap-align: start;
+  overflow-x: hidden;
+  background: radial-gradient(circle,lighten($navy,8%), $navy 50% 100% );
+
+}
+.outlet-container{
+  height: 75vh;
+  overflow-y: scroll;
+
+}
+
 //Styling for the framing images for the scrollable container
 .framing-imgs{
     position: relative;
@@ -17,7 +30,7 @@
     }
   
     background: linear-gradient(to bottom, $gradient-stops);
-    transform: translateY(-30vh);
+    // transform: translateY(-24vh);
     // margin-top: -30vh;
   }
   .top-frame{

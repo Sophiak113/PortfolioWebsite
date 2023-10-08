@@ -1,6 +1,6 @@
 import React from 'react'
-import NavBar from './NavBar'
-import GlitchText from './GlitchText'
+import NavBar from '../components/NavBar'
+import GlitchText from '../components/GlitchText'
 
 const HomePage = () => {
   return (
@@ -16,7 +16,7 @@ const HomePage = () => {
 
       </div>
       <div className="header-nav">
-        {/* <NavBar></NavBar> */}
+        <NavBar></NavBar>
         <GlitchText tag='h2' text='Scroll'></GlitchText>
         <GlitchText tag='h2' text='↓'></GlitchText>
 

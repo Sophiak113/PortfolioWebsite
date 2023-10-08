@@ -8,24 +8,16 @@ const NavBar = () => {
     <nav>
             <GlitchText tag='h2'text='MENU' textAlign='center'></GlitchText>
         <p>
-          <ScrollLink to="home" smooth={true} duration={1000}>
-            Home
-          </ScrollLink>
+          <a href="">Home</a>
         </p>
         <p>
-          <ScrollLink to="intro" smooth={true} duration={1000}>
-            Intro
-          </ScrollLink>
+        <a href="">Intro</a>
         </p>
         <p>
-          <ScrollLink to="projects" smooth={true} duration={1000}>
-            Projects
-          </ScrollLink>
+        <a href="">Projects</a>
         </p>
         <p>
-          <ScrollLink to="contactMe" smooth={true} duration={1000}>
-            Contact Me
-          </ScrollLink>
+        <a href="">Contact Me</a>
         </p>
     </nav>
   );
