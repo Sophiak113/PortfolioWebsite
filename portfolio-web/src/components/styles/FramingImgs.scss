@@ -4,33 +4,36 @@
   scroll-snap-align: start;
   overflow-x: hidden;
   background: radial-gradient(circle,lighten($navy,8%), $navy 50% 100% );
+  z-index: 0;
 
 }
 .outlet-container{
-  height: 75vh;
+  height: 100vh;
   overflow-y: scroll;
+  transform: translateY(-9vh);
 
 }
 
 //Styling for the framing images for the scrollable container
 .framing-imgs{
     position: relative;
-    height: 30vh;
     overflow: visible;
     
   }
   .bot-frame{
+    height: 20vh;
     $base-color: $navy;
     $gradient-stops: ();
     $stop-count: 10;
   
     @for $i from 0 through $stop-count {
-      $opacity: ($i * 1.5);
+      $opacity: ($i * 0.7);
       $gradient-stops: append($gradient-stops, rgba($base-color, $opacity), comma);
     }
   
     background: linear-gradient(to bottom, $gradient-stops);
-    // transform: translateY(-24vh);
+    background-color: transparent;
+    transform: translateY(-25vh);
     // margin-top: -30vh;
   }
   .top-frame{

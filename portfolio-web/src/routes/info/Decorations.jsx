@@ -7,14 +7,15 @@ import { Outlet } from 'react-router-dom';
 const Decorations = () => {
   return (
               <div className="decorative-container">
-                <ExpandingNav />
 
                   <FixedImagesTop/>
                     <div className="outlet-container">
+                    {/* <ExpandingNav /> */}
                         <Outlet></Outlet>
                         
                     </div>
                   <FixedImagesBot></FixedImagesBot>
+  
               </div>
       
   )
@@ -22,10 +23,9 @@ const Decorations = () => {
 
 const ExpandingNav = () => {
   return (
-    <img src="FuschiaHoop.png" alt="" />
-    // <div className='expanding-nav-tab'>
+    <div className='expanding-nav'>
       
-    // </div>
+    </div>
   )
 }
 
