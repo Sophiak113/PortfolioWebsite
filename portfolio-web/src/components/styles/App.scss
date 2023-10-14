@@ -179,8 +179,15 @@ html,body{
 .header-nav>nav>h2{
   text-align: center;
 }
-nav>p:hover a{
+.header-nav>nav>a>img{
+  display: none;
+}
+nav>p>a:hover{
   color: $fuchsia;
+}
+
+nav>p>a{
+  text-decoration: none;
 }
 
 //Styling body container which contains intro projects and contact me

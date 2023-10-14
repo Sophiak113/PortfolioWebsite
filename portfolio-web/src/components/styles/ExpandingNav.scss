@@ -7,3 +7,17 @@
     width: 100%;
     z-index: 2;
 }
+
+// Temporary Nav styling
+.decorative-container>nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.decorative-container>nav>h2{
+    display: none;
+}
+
+.decorative-container>nav>a{
+    width: 10vw;
+}
