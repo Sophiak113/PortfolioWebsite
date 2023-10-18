@@ -86,19 +86,219 @@
 
 // Tablet devices
 @media screen and (min-width:768px) and (max-width: 1023px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 7vw;
+    }
+    h3{
+        font-size: 10vw;
+    }
+    p{
+        font-size: 5vw;
+    }
+
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 5vw;
+    }
+
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 5vw;
+    }
+
+
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 5vw;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+    button{
+        font-size: 5vw;
+    }
     
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
 }
 
 //Small Desktops and Laptops
 @media screen and (min-width:1024px) and (max-width: 1199px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 5vw;
+    }
+    h3{
+        font-size: 8vw;
+    }
+    p{
+        font-size: 4vw;
+    }
+
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 5vw;
+    }
+
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 4vw;
+    }
+    .title-wrapper{
+        display: flex;
+    }
+
+
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 5vw;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+    button{
+        font-size: 5vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
 }
 
 //Standard Desktops
 @media screen and (min-width:1200px) and (max-width: 1439px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 7vw;
+    }
+    h3{
+        font-size: 10vw;
+    }
+    p{
+        font-size: 5vw;
+    }
 
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 5vw;
+    }
+
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 5vw;
+    }
+
+
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 5vw;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+    button{
+        font-size: 5vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
 }
 
 //Large Desktops
 @media screen and (min-width:1440px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 7vw;
+    }
+    h3{
+        font-size: 10vw;
+    }
+    p{
+        font-size: 5vw;
+    }
 
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 5vw;
+    }
+
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 5vw;
+    }
+
+
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 5vw;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+    button{
+        font-size: 5vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
 }
