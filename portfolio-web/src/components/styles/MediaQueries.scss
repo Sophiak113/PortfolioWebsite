@@ -278,31 +278,47 @@
 @media screen and (min-width:1440px){
     //Adjusting font size of constants across the webpage
     h2{
-        font-size: 5vw;
+        font-size: 3vw;
     }
     h3{
-        font-size: 8vw;
+        font-size: 5vw;
     }
     p{
-        font-size: 3vw;
+        font-size: 2vw;
+    }
+
+    //Navbar
+    .decorative-container>nav{
+        height: 10vh;
     }
 
     //Adjusting footer
     .footer-contact-info > a{
-        font-size: 3vw;
+        font-size: 2vw;
     }
 
     //Adjusting home page menu links font size
     .header-nav > nav > p{
-        font-size: 4vw;
+        font-size: 3vw;
     }
 
     //Intro page
     //Adjusting the layout of the Skills Icons
     .skills-icon-container{
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: repeat(8,1fr);
     }
-    
+    .expanded{
+        align-items: center;
+        padding: 1vw;
+        gap: 2vw;
+    }
+    .expanded>img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .selectedSkill{
+        grid-column: span 4;
+    }
 
     //Project Page
     //Changing detail container from a flex to grid layout
@@ -310,7 +326,7 @@
         display: grid;
         grid-template-columns: 2fr 1fr;
         gap: 5vw;
-        padding: 2vw;
+        padding: 2vw; 
     }
     .paragraphs-wrapper{
         grid-column: 1;
@@ -320,17 +336,20 @@
         flex-direction: column;
         justify-content: center;
     }
+    .detail-link-wrapper>.skill-outline{
+        width: 30%;
+    }
 
     //Contact Me Page
     //Adjusting contact form font sizes
     input[type=text]{
-        font-size: 4vw;
+        font-size: 2vw;
     }
     textarea{
-        font-size: 3vw;
+        font-size: 2vw;
     }
     button{
-        font-size: 4vw;
+        font-size: 2vw;
     }
     
     //Adjusting layout of contact page
@@ -339,6 +358,10 @@
         padding-left: 7vw;
         padding-right: 7vw;
         gap: 5vw;
+        justify-content: center;
+    }
+    .contact-form-container{
+        max-width: 1000px;
     }
     .links-container > div{
         grid-template-columns: 1fr;
