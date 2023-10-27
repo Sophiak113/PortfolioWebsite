@@ -23,13 +23,13 @@ const Decorations = () => {
   )
 }
 
-const ExpandingNav = () => {
-  return (
-    // <div className='expanding-nav'>
+// const ExpandingNav = () => {
+//   return (
+//     // <div className='expanding-nav'>
       
-    // </div>
-  )
-}
+//     // </div>
+//   )
+// }
 
 
 
