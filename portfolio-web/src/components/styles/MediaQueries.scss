@@ -24,133 +24,458 @@
 // Screen Width: 1440px and above
 // Common Breakpoint: 1440px, 1600px, 1920px
 
-//Mobile media query for 480px Portrait
-// @media(max-width: 480px){
-//     //For mobile everything will be changed to a stacked layout
+
+//Original dimensions built for mobile
+//I took a mobile first approach so no media query needed for the original dimensions
+//Portrait mobile
+@media screen and (max-width: 480px) {
+  }
+
+
+ 
   
 
-  
-//     .home-page-container{
-//       height: 100vh;
-//     }
-  
-//     .page-container{
-//       height: fit-content;
-//     }
-  
-//     //Changing intro page
-//     .intro-body-container{
-//       display: flex;
-//       flex-direction: column;
-//     }
+@media screen and (min-width:481px) and (max-width: 767px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 7vw;
+    }
+    h3{
+        font-size: 10vw;
+    }
+    p{
+        font-size: 5vw;
+    }
 
-//     //Make the about me, skills, qualities bodies have no margin
-//     .intro-body-container > :nth-child(-n+2) > :nth-child(2){
-//         margin: 0;
-//     }
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 5vw;
+    }
 
-//     //Splitting skills into 2 columns, making card outline bigger and putting the labels next to the cards and making sure they don't overlap
-//     .skills-icon-container{
-//         display: grid;
-//         grid-template-columns: 1fr 1fr;
-//     }
-
-//     .icon-container{
-//         display: grid;
-//         grid-template-columns: 1fr 1fr;
-//         grid-template-rows: 1fr;
-//     }
-//     .icon-container>*{
-//         margin: 0;
-//     }
-
-//     .icon-container>.card-outline{
-//         grid-column: 1;
-//         grid-row: 1;
-//     }
-
-//     .icon-container>p{
-//         grid-column: 2;
-//         grid-row: 1;
-//     }
-
-//     .card-outline{
-//         height: 10vw;
-//         width: 10vw;
-//     }
-
-//     //Qualities styling for mobile
-
-//     //Turns it into sort of a horizontal list to save space
-//     .qualities-body-wrapper{
-//         display: flex;
-//         flex-wrap: wrap;
-//         gap: 10px;
-//     }
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 5vw;
+    }
 
 
-//     .quality-wrapper{
-//         padding: 0px 20px;
-//         line-height: 1vh;
-//     }
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 5vw;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+    button{
+        font-size: 5vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
 
-//     //Projects Page mobile styling
+}
 
-//     .project-page-container>.header-container{
-//         margin-top: 30px;
-//     }
+// Tablet devices
+@media screen and (min-width:768px) and (max-width: 1023px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 7vw;
+    }
+    h3{
+        font-size: 10vw;
+    }
+    p{
+        font-size: 5vw;
+    }
 
-//     //Making it so the list of projects will be a horizontal list section at the top
-//     //and the detail container will appear underneath so it'll be stacked
-//     .project-and-detail-container{
-//         display: flex;
-//         flex-direction: column;
-//         padding-top: 20px;
-//     }
-//     .projects-body-wrapper{
-//         display: flex;
-//         flex-direction: row;
-//         flex-wrap: wrap;
-//     }
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 5vw;
+    }
 
-//     .project-wrapper{
-//         padding: 0 5px;
-//     }
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 5vw;
+    }
 
-//     //Making detail container stacked layout instead of grid
-//     .detail-container{
-//         display: flex;
-//         flex-direction: column;
-//         width: 85%;
 
-//     }
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 5vw;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+    button{
+        font-size: 5vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
+}
 
-//     //Contact me mobile styling
-//     //Turning it into a stacked layout
-//     .contact-body-container{
-//         display: flex;
-//         flex-direction: column;
-//         margin: 10px 30px;
-//     }
+//Small Desktops and Laptops
+@media screen and (min-width:1024px) and (max-width: 1199px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 5vw;
+    }
+    h3{
+        font-size: 8vw;
+    }
+    p{
+        font-size: 3vw;
+    }
 
-//     .contact-form-container{
-//         width: 100%;
-//         height: fit-content;
-//     }
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 3vw;
+    }
 
-//     form>*{
-//         font-size: 1.1em;
-//     }
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 4vw;
+    }
 
-//     //Turning the icons links into a row to save space
-//     .links-container>:not(h2){
-//         display: flex;
-//         flex-direction: row;
-//     }
+    //Intro page
+    //Adjusting the layout of the Skills Icons
+    .skills-icon-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
 
-//     //Styling Footer
-//     footer{
-//         translate: 0px 0px;
-//     }
-  
-//   }
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 4vw;
+    }
+    textarea{
+        font-size: 4vw;
+    }
+    button{
+        font-size: 4vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
+}
+
+//Standard Desktops
+@media screen and (min-width:1200px) and (max-width: 1439px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 5vw;
+    }
+    h3{
+        font-size: 8vw;
+    }
+    p{
+        font-size: 3vw;
+    }
+
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 3vw;
+    }
+
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 4vw;
+    }
+
+    //Intro page
+    //Adjusting the layout of the Skills Icons
+    .skills-icon-container{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+    
+
+    //Project Page
+    //Changing detail container from a flex to grid layout
+    .detail-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5vw;
+        padding: 2vw;
+    }
+    .paragraphs-wrapper{
+        grid-column: 1;
+    }
+    .detail-img-and-link-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 4vw;
+    }
+    textarea{
+        font-size: 3vw;
+    }
+    button{
+        font-size: 4vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
+}
+
+//Large Desktops
+@media screen and (min-width:1440px){
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 3vw;
+    }
+    h3{
+        font-size: 5vw;
+    }
+    p{
+        font-size: 2vw;
+    }
+
+    //Navbar
+    .decorative-container>nav{
+        height: 10vh;
+    }
+
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 2vw;
+    }
+
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 3vw;
+    }
+
+    //Intro page
+    //Adjusting the layout of the Skills Icons
+    .skills-icon-container{
+        grid-template-columns: repeat(8,1fr);
+    }
+    .expanded{
+        align-items: center;
+        padding: 1vw;
+        gap: 2vw;
+    }
+    .expanded>img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .selectedSkill{
+        grid-column: span 4;
+    }
+
+    //Project Page
+    //Changing detail container from a flex to grid layout
+    .detail-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5vw;
+        padding: 2vw; 
+    }
+    .paragraphs-wrapper{
+        grid-column: 1;
+    }
+    .detail-img-and-link-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .detail-link-wrapper>.skill-outline{
+        width: 30%;
+    }
+
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 2vw;
+    }
+    textarea{
+        font-size: 2vw;
+    }
+    button{
+        font-size: 2vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+        justify-content: center;
+    }
+    .contact-form-container{
+        max-width: 1000px;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
+}
+
+ //Landscape mobiles
+ //Wondering if I need the max-width as only max height really matters for my website
+ @media screen and (max-width: 1000px) and (max-height: 430px) and (orientation: landscape) {
+    //Adjusting font size of constants across the webpage
+    h2{
+        font-size: 10vh;
+    }
+    h3{
+        font-size: 15vh;
+    }
+    p{
+        font-size: 2vw;
+    }
+
+    //Navbar
+    .decorative-container>nav{
+        height: 10vh;
+    }
+
+    //Adjusting footer
+    .footer-contact-info > a{
+        font-size: 2vw;
+    }
+
+    //Adjusting home page menu links font size
+    .header-nav > nav > p{
+        font-size: 3vw;
+    }
+
+    //Intro page
+    //Adjusting the layout of the Skills Icons
+    .skills-icon-container{
+        grid-template-columns: repeat(8,1fr);
+    }
+    .expanded{
+        align-items: center;
+        padding: 1vw;
+        gap: 2vw;
+    }
+    .expanded>img{
+        width: 5vw;
+        height: 5vw;
+    }
+    .selectedSkill{
+        grid-column: span 4;
+    }
+
+    //Project Page
+    //Changing detail container from a flex to grid layout
+    .detail-container{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 5vw;
+        padding: 2vw; 
+    }
+    .paragraphs-wrapper{
+        grid-column: 1;
+    }
+    .detail-img-and-link-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .detail-link-wrapper>.skill-outline{
+        width: 30%;
+    }
+
+    //Contact Me Page
+    //Adjusting contact form font sizes
+    input[type=text]{
+        font-size: 2vw;
+    }
+    textarea{
+        font-size: 2vw;
+    }
+    button{
+        font-size: 2vw;
+    }
+    
+    //Adjusting layout of contact page
+    .contact-body-container{
+        flex-direction: row;
+        padding-left: 7vw;
+        padding-right: 7vw;
+        gap: 5vw;
+        justify-content: center;
+    }
+    .contact-form-container{
+        max-width: 1000px;
+    }
+    .links-container > div{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .links-container > div > .skill-outline{
+        width: 10vw;
+        height: 10vw;
+        margin: 0px 0 20px 0;
+    }
+}

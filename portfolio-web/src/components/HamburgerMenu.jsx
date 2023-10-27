@@ -3,9 +3,10 @@ import GlitchText from './GlitchText';
 // import { Link as ScrollLink } from 'react-scroll';
 import { Link } from 'react-router-dom'; // If using React Router
 
-const NavBar = () => {
+const HamburgerMenu = () => {
   const [isHamburger, setIsHamburger] = useState(false);
-  const [screenWidth, setScreenWidth] = useState(null)
+  const [screenWidth, setScreenWidth] = useState(null);
+  const [isClicked, setIsClicked] = useState(false)
 
   useEffect (() =>{
     function handleResize(){
@@ -50,4 +51,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar
+export default HamburgerMenu

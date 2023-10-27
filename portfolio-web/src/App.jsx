@@ -3,11 +3,13 @@ import Background from './components/Background';
 import FixedImagesTop from './components/FixedImagesTop';
 import FixedImagesBot from './components/FixedImagesBot';
 import ContactPage from './components/ContactMePageFolder/ContactPage';
-import HomePage from './components/HomePage';
+import HomePage from './routes/HomePage';
 import IntroPage from './components/IntroPageFolder/IntroPage';
 import ProjectsPage from './components/ProjectsPageFolder/ProjectsPage';
-import { Element, Link as ScrollLink } from 'react-scroll';
+import {Routes, Route} from 'react-router-dom';
+import Decorations from './routes/info/Decorations';
 import Footer from './components/Footer';
+import './components/styles/ExpandingNav.scss';
 import './components/styles/Footer.scss';
 import './components/styles/FramingImgs.scss';
 import './components/styles/App.scss';
@@ -63,20 +65,31 @@ function App() {
       <Background/>
 {/* Page container is designed to be the same size as the viewport and allows the pages to be scroll snapped to */}
 
-        <HomePage></HomePage>
+        <Routes>
+          <Route path='/' element={<HomePage/>}></Route>
+          <Route path='/info' element={<Decorations/>}>
+            <Route path='intro' element={<IntroPage/>}></Route>
+            <Route path='projects' element={<ProjectsPage/>}></Route>
+            <Route path='contact' element={<ContactPage/>}></Route>
+          </Route>
+
+
+        </Routes>
         
       </div>
-
+{/* 
       <div className="body-container" ref={bodyContainerRef}>
-      <FixedImagesTop/>
+
 
         <div className="scrollable-container">
-          <IntroPage ref={introSectionRef}></IntroPage>
-          <ProjectsPage ref={projectsSectionRef}></ProjectsPage>
-          <ContactPage ref={contactSectionRef}></ContactPage>
+            <IntroPage ref={introSectionRef}></IntroPage>
+            <ProjectsPage ref={projectsSectionRef}></ProjectsPage>
+            <ContactPage ref={contactSectionRef}></ContactPage>
           </div>
-          <FixedImagesBot></FixedImagesBot>
-      </div>
+
+
+
+      </div> */}
       <Footer></Footer>
 
         
