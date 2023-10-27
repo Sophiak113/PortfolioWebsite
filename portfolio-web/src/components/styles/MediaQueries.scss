@@ -380,6 +380,7 @@
 }
 
  //Landscape mobiles
+ //Wondering if I need the max-width as only max height really matters for my website
  @media screen and (max-width: 1000px) and (max-height: 430px) and (orientation: landscape) {
     //Adjusting font size of constants across the webpage
     h2{

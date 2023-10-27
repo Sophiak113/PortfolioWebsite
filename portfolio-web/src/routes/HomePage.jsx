@@ -5,7 +5,9 @@ import GlitchText from '../components/GlitchText'
 const HomePage = () => {
   //screenWidth and sameDiv are a part of responsiveness, when the screen becomes wide enough Sophia Kinsey comes onto 1 line instead of 2
   const [screenWidth, setScreenWidth] = useState(window.innerWidth)
-  const [sameDiv, setSameDiv] = useState(screenWidth > 1024)
+  const [orientation, setOrientation] = useState(window.screen.orientation.type);
+  const [sameDiv, setSameDiv] = useState(screenWidth > 1024 || orientation == 'landscape-primary')
+
 
     //Checking for resize and if the screen width is over 1024, Sophia Kinsey is 1 div not 2
   useEffect(()=>{
@@ -15,12 +17,20 @@ const HomePage = () => {
       setSameDiv(newWidth > 1024);
     };
 
-    // Add an event listener for window resize
+    function handleOrientationChange() {
+      const newOrientation = window.screen.orientation.type;
+      setOrientation(newOrientation);
+    }
+
+    // Add an event listener for window resize and orientation change
+    //orientation change is mainly for mobiles or tablets
     window.addEventListener('resize', handleResize);
+    window.addEventListener('orientationchange', handleOrientationChange);
 
 
     return () => {
       window.removeEventListener('resize', handleResize);
+      window.removeEventListener('orientationchange', handleOrientationChange);
     };
 
 
