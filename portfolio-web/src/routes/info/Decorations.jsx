@@ -30,49 +30,39 @@ const Decorations = () => {
 }
 
 const ExpandingNav = () => {
-  const [isClicked, setIsClicked] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  const handleClick =()=>{
-    setIsClicked(true)
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
-  }
+  const handleCloseMenuClick = () => {
+    setIsMenuOpen(false);
+  };
 
-
-
-  // useEffect(()=>{
-  //   function handleClick(){
-      
-  //   }
-
-  // },[]);
   return (
     <div className='expanding-nav-container'>
-      <div className="expanding-nav-tab" onClick={()=>handleClick()}>
-      {/* Nav */}
-      <div className="hamburger-line"></div>
-      <div className="hamburger-line"></div>
-      <div className="hamburger-line"></div>
+      <div className="expanding-nav-tab" onClick={handleToggleMenu}>
+        {/* Nav */}
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
+        <div className="hamburger-line"></div>
       </div>
-    {isClicked ? <DropDownNav/>: ''
-    }
-      
+      {isMenuOpen && <DropDownNav onCloseMenuClick={handleCloseMenuClick} />}
     </div>
-  )
+  );
 }
 
-const DropDownNav=()=>{
-  return(
+const DropDownNav = ({ onCloseMenuClick }) => {
+  return (
     <div className="drop-down-container-nav">
-      <div className="close-menu-icon-container">
+      <div className="close-menu-icon-container" onClick={onCloseMenuClick}>
         <div className="close-menu-line-1"></div>
         <div className="close-menu-line-2"></div>
       </div>
-      <NavBar/>
-
+      <NavBar></NavBar>
     </div>
-
   );
-
 }
 
 export default Decorations
