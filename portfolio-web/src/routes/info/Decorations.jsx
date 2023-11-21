@@ -63,7 +63,10 @@ const ExpandingNav = () => {
 const DropDownNav=()=>{
   return(
     <div className="drop-down-container-nav">
-      
+      <div className="close-menu-icon-container">
+        <div className="close-menu-line-1"></div>
+        <div className="close-menu-line-2"></div>
+      </div>
       <NavBar/>
 
     </div>

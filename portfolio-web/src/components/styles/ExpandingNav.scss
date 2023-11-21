@@ -62,7 +62,30 @@
     width: 40vw;
 
 }
-
+// Styling the close menu icon that appears with the menu after the hamburger is clicked
+.close-menu-icon-container{
+    position: absolute;
+    width: 10vw;
+    height: 10vw;
+    background-color: $neonMagenta;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+}
+.close-menu-line-1, .close-menu-line-2{
+    width: 8vw;
+    height: 1vw;
+    background-color: white;
+    border-radius: 100px;
+    position: absolute;  
+}
+.close-menu-line-1{
+    rotate: 135deg;
+}
+.close-menu-line-2{
+    rotate: 45deg;
+}
 
 .hamburger-line{
     width: 100%;
