@@ -12,6 +12,14 @@
   overflow-y: scroll;
   transform: translateY(-9vh);
 
+  //Hiding the scrollbar
+  scrollbar-width: thin; /* for Firefox */
+  -ms-overflow-style: none; /* for Internet Explorer and Edge */
+
+}
+/* Hide the scrollbar for WebKit browsers (Chrome, Safari) */
+.outlet-container::-webkit-scrollbar {
+  display: none;
 }
 
 .outlet-container>div{
