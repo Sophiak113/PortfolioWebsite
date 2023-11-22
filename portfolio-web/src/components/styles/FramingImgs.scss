@@ -11,14 +11,26 @@
   height: 100vh;
   overflow-y: scroll;
   transform: translateY(-9vh);
-
-  //Hiding the scrollbar
-  scrollbar-width: thin; /* for Firefox */
-  -ms-overflow-style: none; /* for Internet Explorer and Edge */
-
 }
-/* Hide the scrollbar for WebKit browsers (Chrome, Safari) */
+
+/* Apply styles to scrollbar in the body element */
 .outlet-container::-webkit-scrollbar {
+  width: 20px; /* Width of the scrollbar */
+}
+
+.outlet-container::-webkit-scrollbar-thumb {
+  background: $purple; /* Color of the thumb */
+  border-radius: 10px; /* Round the thumb */
+}
+///////////////////////////////////////////////////////
+
+.outlet-container::-webkit-scrollbar-track {
+  background: $navy; /* Color of the track */
+}
+
+/* Change the color of the scrollbar arrows */
+.outlet-container::-webkit-scrollbar-button {
+  background: $navy; /* Color of the arrows */
   display: none;
 }
 
