@@ -29,6 +29,7 @@ const Decorations = () => {
   )
 }
 
+
 const ExpandingNav = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -52,6 +53,7 @@ const ExpandingNav = () => {
     </div>
   );
 }
+
 
 const DropDownNav = ({ onCloseMenuClick }) => {
   return (
