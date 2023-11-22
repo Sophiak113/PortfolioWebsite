@@ -11,7 +11,26 @@
   height: 100vh;
   overflow-y: scroll;
   transform: translateY(-9vh);
+}
 
+/* Apply styles to scrollbar in the body element */
+.outlet-container::-webkit-scrollbar {
+  width: 20px; /* Width of the scrollbar */
+}
+
+.outlet-container::-webkit-scrollbar-thumb {
+  background: $purple; /* Color of the thumb */
+  border-radius: 10px; /* Round the thumb */
+}
+
+.outlet-container::-webkit-scrollbar-track {
+  background: $navy; /* Color of the track */
+}
+
+/* Change the color of the scrollbar arrows */
+.outlet-container::-webkit-scrollbar-button {
+  background: $navy; /* Color of the arrows */
+  display: none;
 }
 
 .outlet-container>div{
