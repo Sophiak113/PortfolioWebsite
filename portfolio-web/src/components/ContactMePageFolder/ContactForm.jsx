@@ -83,26 +83,15 @@ const ContactForm = () => {
   
   return (
     <form className='contact-form' name='contact-me' method="POST" data-netlify="true">
-            <input type="text" placeholder='Email' name='email' 
-            // value={inputs.email} onChange={handleChange}
-            />
+            <label >Email:<input type="text" placeholder='Email' name='email'  /></label>
 
-            {/* Conditonally renders a message telling you to enter valid input if the form field fails validation */}
-            {/* {errors.email && <div className="error">{errors.email}</div> } */}
+            <label >Name:<input type="text" name='name' placeholder='Name' />  </label>
+            <label >Subject:<input type="text" placeholder='Subject' name='subject'  /></label>
 
-            <input type="text" name='name' placeholder='Name' 
-            // value={inputs.name} onChange={handleChange}
-            />
-            {/* {errors.name && <div className="error">{errors.name}</div> } */}
-
-            <input type="text" placeholder='Subject' name='subject' 
-            // value={inputs.subject} onChange={handleChange}
-            />
-            <textarea type="longInput" id="" cols="30" rows="10" placeholder='Message'
-            name='message' 
-            // value={inputs.message} onChange={handleChange}
-            ></textarea>
-            {/* {errors.message && <div className="error">{errors.message}</div> } */}
+            <label >Message:
+              <textarea type="longInput" id="" cols="30" rows="10" placeholder='Message'
+              name='message' ></textarea>
+            </label>
 
             <button type='submit'>Send</button>
 
