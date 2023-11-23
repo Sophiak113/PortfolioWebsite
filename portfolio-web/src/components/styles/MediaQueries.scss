@@ -302,6 +302,39 @@
         font-size: 2.5vw;
     }
 
+    //Adjusting Hamburger menu icon (3 lines)
+    .expanding-nav-tab{
+        width: 6vw;
+        right: 2vw;
+    }
+    .hamburger-line{
+        height: 0.8vh;
+    }
+    //Adjusting menu that pops up after hamburger is cliked
+        //Adjusting close icon
+    .close-menu-icon-container{
+        width: 10vh;
+        height: 10vh;
+    }
+    .close-menu-line-2, .close-menu-line-1{
+        width: 4vw;
+        height: 1vh;
+    }
+        //Adjusting logo img
+        .drop-down-container-nav>nav>a>img{
+            width: 25vh;
+            height: 25vh;
+        }
+
+        //Adjusting nav/menu links
+        .drop-down-container-nav>nav>p{
+            height: 7vh;
+            line-height: 7vh;
+            font-size: 3vw;
+            margin-top: 1vw;
+            margin-bottom: 2vw;
+        }
+
     //Adjusting home page menu links font size
     .header-nav > nav > p{
         font-size: 3vw;
