@@ -82,9 +82,7 @@ const ContactForm = () => {
   
   
   return (
-    <form className='contact-form' method="POST" netlify
-    // onSubmit={handleSubmit}
-    >
+    <form className='contact-form' method="POST" data-netlify="true">
             <input type="text" placeholder='Email' name='email' 
             // value={inputs.email} onChange={handleChange}
             />
