@@ -82,7 +82,7 @@ const ContactForm = () => {
   
   
   return (
-    <form  name='contactForm' className='contact-form' netlify>
+    <form  name='contactForm' className='contact-form' method="POST" netlify>
             <input type="hidden" name="form-name" value="contactForm" />
             {/* The hidden input is needed so this form can work with netlify */}
 
