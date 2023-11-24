@@ -83,18 +83,17 @@ const ContactForm = () => {
   
   return (
     <form  name='contactForm' className='contact-form' netlify>
-      <input type="hidden" name="form-name" value="contactForm" />
-            <p><label >Email:<input type="text" placeholder='Email' name='email'  /></label></p>
+            <input type="hidden" name="form-name" value="contactForm" />
+            {/* The hidden input is needed so this form can work with netlify */}
 
-            <p><label >Name:<input type="text" name='name' placeholder='Name' />  </label></p>
-            <p><label >Subject:<input type="text" placeholder='Subject' name='subject'  /></label></p>
+            <input type="text" placeholder='Email' name='email'  />
 
-            <p>
-              <label >Message:
+            <input type="text" name='name' placeholder='Name' />
+            <input type="text" placeholder='Subject' name='subject'  />
+
                 <textarea type="longInput" id="" cols="30" rows="10" placeholder='Message'
                 name='message' ></textarea>
-              </label>
-            </p>
+  
 
             <button type='submit'>Send</button>
 
