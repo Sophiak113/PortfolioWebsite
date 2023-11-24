@@ -82,16 +82,18 @@ const ContactForm = () => {
   
   
   return (
-    <form className='contact-form' name='contact-me' method="POST" data-netlify="true">
-            <label >Email:<input type="text" placeholder='Email' name='email'  /></label>
+    <form  name='contactForm' className='contact-form' method="POST" data-netlify="true">
+            <p><label >Email:<input type="text" placeholder='Email' name='email'  /></label></p>
 
-            <label >Name:<input type="text" name='name' placeholder='Name' />  </label>
-            <label >Subject:<input type="text" placeholder='Subject' name='subject'  /></label>
+            <p><label >Name:<input type="text" name='name' placeholder='Name' />  </label></p>
+            <p><label >Subject:<input type="text" placeholder='Subject' name='subject'  /></label></p>
 
-            <label >Message:
-              <textarea type="longInput" id="" cols="30" rows="10" placeholder='Message'
-              name='message' ></textarea>
-            </label>
+            <p>
+              <label >Message:
+                <textarea type="longInput" id="" cols="30" rows="10" placeholder='Message'
+                name='message' ></textarea>
+              </label>
+            </p>
 
             <button type='submit'>Send</button>
 
