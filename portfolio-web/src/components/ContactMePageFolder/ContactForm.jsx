@@ -82,7 +82,8 @@ const ContactForm = () => {
   
   
   return (
-    <form  name='contactForm' className='contact-form' method="POST" data-netlify="true">
+    <form  name='contactForm' className='contact-form' netlify>
+      <input type="hidden" name="form-name" value="contactForm" />
             <p><label >Email:<input type="text" placeholder='Email' name='email'  /></label></p>
 
             <p><label >Name:<input type="text" name='name' placeholder='Name' />  </label></p>
